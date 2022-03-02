@@ -1,0 +1,23 @@
+Type,Abbreviation,Variable,Order
+Cluster A: Economic Management,A1,Macroeconomic Management,1
+Cluster A: Economic Management,A2,Fiscal Policy,2
+Cluster A: Economic Management,A3,Debt Policy,3
+Cluster A: Economic Management,A_avg,Cluster A Average,4
+Cluster B: Structural Policies,B4,Trade,5
+Cluster B: Structural Policies,B5,Financial Sector,6
+Cluster B: Structural Policies,B6,Business Regulatory Environment,7
+Cluster B: Structural Policies,B_avg,Cluster B Average,8
+Cluster C: Policies for Social Inclusion/Equity,C7,Gender Equality,9
+Cluster C: Policies for Social Inclusion/Equity,C8,Equity of Public Resource Use,10
+Cluster C: Policies for Social Inclusion/Equity,C9,Building Human Resources,11
+Cluster C: Policies for Social Inclusion/Equity,C10,Social Protection and Labor,12
+Cluster C: Policies for Social Inclusion/Equity,C11,Policies and Institutions for Environmental Sustainability,13
+Cluster C: Policies for Social Inclusion/Equity,C_avg,Cluster C Average,14
+Cluster D: Public Sector Management and Institutions,D12,Property Rights and Rule-based Governance,15
+Cluster D: Public Sector Management and Institutions,D13,Quality of Budgetary and Financial Management,16
+Cluster D: Public Sector Management and Institutions,D14,Efficiency of Revenue Mobilization,17
+Cluster D: Public Sector Management and Institutions,D15,Quality of Public Administration,18
+Cluster D: Public Sector Management and Institutions,D16,"Transparency, Accountability and Corruption in the Public Sector",19
+Cluster D: Public Sector Management and Institutions,D_avg,Cluster D Average,20
+Portfolio,portfolio,Portfolio,21
+Policy Performance/Overall Rating,overall_rating,Policy Performance/Overall Rating,22

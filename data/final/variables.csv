@@ -1,0 +1,130 @@
+file_name,data_source,variable,min_year,max_year
+wwgi_clean.csv,WWGI,value.Control of Corruption: Estimate,2011.0,2020.0
+wwgi_clean.csv,WWGI,value.Government Effectiveness: Estimate,2011.0,2020.0
+wwgi_clean.csv,WWGI,value.Political Stability and Absence of Violence/Terrorism: Estimate,2011.0,2020.0
+wwgi_clean.csv,WWGI,value.Regulatory Quality: Estimate,2011.0,2020.0
+wwgi_clean.csv,WWGI,value.Rule of Law: Estimate,2011.0,2020.0
+wwgi_clean.csv,WWGI,value.Voice and Accountability: Estimate,2011.0,2020.0
+World Bank Climate Knowledge Portal.csv,World Bank Climate Knowledge Portal ,mean_temperature,2010.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,conflict_stock_displacement,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,conflict_stock_displacement_raw,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,conflict_new_displacements,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,conflict_new_displacements_raw,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,disaster_new_displacements,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,disaster_new_displacements_raw,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,disaster_stock_displacement,2008.0,2020.0
+IDMC_Conflict and Disaster Total.csv,IDMC,disaster_stock_displacementr_raw,2008.0,2020.0
+"UN HDI, Environment Pillar.csv",UN_HDI,hdi_rank,2010.0,2019.0
+"UN HDI, Environment Pillar.csv",UN_HDI,hdi_value,2010.0,2019.0
+epi.csv,Yale EPI,EPI,2010.0,2020.0
+epi.csv,Yale EPI,HLT,2018.0,2020.0
+epi.csv,Yale EPI,AIR,2010.0,2020.0
+epi.csv,Yale EPI,H2O,2018.0,2020.0
+epi.csv,Yale EPI,HMT,2018.0,2020.0
+epi.csv,Yale EPI,ECO,2018.0,2020.0
+epi.csv,Yale EPI,BDH,2018.0,2020.0
+epi.csv,Yale EPI,FSH,2018.0,2020.0
+epi.csv,Yale EPI,CCH,2010.0,2020.0
+epi.csv,Yale EPI,APE,2018.0,2020.0
+epi.csv,Yale EPI,WRS,2018.0,2020.0
+epi.csv,Yale EPI,AGR,2018.0,2020.0
+epi.csv,Yale EPI,HAD,2018.0,2020.0
+epi.csv,Yale EPI,PMD,2018.0,2020.0
+epi.csv,Yale EPI,PMW,2018.0,2018.0
+epi.csv,Yale EPI,USD,2018.0,2020.0
+epi.csv,Yale EPI,UWD,2018.0,2020.0
+epi.csv,Yale EPI,PBD,2018.0,2020.0
+epi.csv,Yale EPI,MPA,2018.0,2020.0
+epi.csv,Yale EPI,TBN,2018.0,2020.0
+epi.csv,Yale EPI,TBG,2018.0,2020.0
+epi.csv,Yale EPI,SPI,2018.0,2020.0
+epi.csv,Yale EPI,PAR,2018.0,2020.0
+epi.csv,Yale EPI,SHI,2018.0,2020.0
+epi.csv,Yale EPI,TCL,2018.0,2020.0
+epi.csv,Yale EPI,FSS,2018.0,2020.0
+epi.csv,Yale EPI,RMS,2018.0,2020.0
+epi.csv,Yale EPI,DCT,2018.0,2018.0
+epi.csv,Yale EPI,DPT,2018.0,2018.0
+epi.csv,Yale EPI,DMT,2018.0,2018.0
+epi.csv,Yale EPI,DNT,2018.0,2018.0
+epi.csv,Yale EPI,DBT,2018.0,2018.0
+epi.csv,Yale EPI,DST,2018.0,2018.0
+epi.csv,Yale EPI,DXT,2018.0,2018.0
+epi.csv,Yale EPI,WWT,2018.0,2020.0
+epi.csv,Yale EPI,SNM,2018.0,2020.0
+epi.csv,Yale EPI,OZD,2020.0,2020.0
+epi.csv,Yale EPI,WMG,2020.0,2020.0
+epi.csv,Yale EPI,MSW,2020.0,2020.0
+epi.csv,Yale EPI,BHV,2020.0,2020.0
+epi.csv,Yale EPI,ECS,2020.0,2020.0
+epi.csv,Yale EPI,GRL,2020.0,2020.0
+epi.csv,Yale EPI,WTL,2020.0,2020.0
+epi.csv,Yale EPI,FGT,2020.0,2020.0
+epi.csv,Yale EPI,CDA,2020.0,2020.0
+epi.csv,Yale EPI,CHA,2020.0,2020.0
+epi.csv,Yale EPI,FGA,2020.0,2020.0
+epi.csv,Yale EPI,NDA,2020.0,2020.0
+epi.csv,Yale EPI,BCA,2020.0,2020.0
+epi.csv,Yale EPI,LCB,2020.0,2020.0
+epi.csv,Yale EPI,GIB,2020.0,2020.0
+epi.csv,Yale EPI,GHP,2020.0,2020.0
+epi.csv,Yale EPI,SDA,2020.0,2020.0
+epi.csv,Yale EPI,NXA,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_both_sex,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_male,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_female,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,totalpop_both_in_thou,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,totalpop_male_in_though,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,totalpop_female_in_thou,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_percent_totalpop_both_sex,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_percent_totalpop_male,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,ims_percent_totalpop_female,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,female_migrants_perc_ims,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,estimated_refugee_stock_incl_asylum_seekers_both_sexes,2020.0,2020.0
+UNDESA_clean.csv,UNDESA,refugees_asylum_seekers_perc_ims,2020.0,2020.0
+V-Dem.csv,V-Dem,v2pepwrses,1789.0,2020.0
+V-Dem.csv,V-Dem,v2peapssoc,1900.0,2020.0
+V-Dem.csv,V-Dem,v2clsocgrp,1789.0,2020.0
+fsi.csv,FSI,fsi_total,2012.0,2021.0
+fsi.csv,FSI,C1: Security Apparatus,2012.0,2021.0
+fsi.csv,FSI,C2: Factionalized Elites,2012.0,2021.0
+fsi.csv,FSI,C3: Group Grievance,2012.0,2021.0
+fsi.csv,FSI,E1: Economy,2012.0,2021.0
+fsi.csv,FSI,E2: Economic Inequality,2012.0,2021.0
+fsi.csv,FSI,E3: Human Flight and Brain Drain,2012.0,2021.0
+fsi.csv,FSI,P1: State Legitimacy,2012.0,2021.0
+fsi.csv,FSI,P2: Public Services,2012.0,2021.0
+fsi.csv,FSI,P3: Human Rights,2012.0,2021.0
+fsi.csv,FSI,S1: Demographic Pressures,2012.0,2021.0
+fsi.csv,FSI,S2: Refugees and IDPs,2012.0,2021.0
+fsi.csv,FSI,X1: External Intervention,2012.0,2021.0
+wb_macro.csv,World Bank,value.Gini index (World Bank estimate),2001.0,2019.0
+wb_macro.csv,World Bank,GDP per capita (constant 2015 US$),2001.0,2020.0
+wb_macro.csv,World Bank,value.GDP (constant 2015 US$),2001.0,2020.0
+cri.csv,Germanwatch,CRI score,2018.0,2019.0
+cri.csv,Germanwatch,Fatalities (Rank),2018.0,2019.0
+cri.csv,Germanwatch,Fatalities per 100 000 inhabitants (Rank),2018.0,2019.0
+cri.csv,Germanwatch,Losses in million US$ (PPP) (Rank),2018.0,2019.0
+cri.csv,Germanwatch,Losses per unit GDP in % (Rank),2018.0,2019.0
+ADB_CPA_clean.csv,ADB_CPA,A1,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,A2,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,A3,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,A_avg,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,B4,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,B5,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,B6,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,B_avg,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C7,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C8,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C9,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C10,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C11,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,C_avg,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D12,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D13,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D14,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D15,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D16,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,D_avg,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,portfolio,2010.0,2020.0
+ADB_CPA_clean.csv,ADB_CPA,overall_rating,2010.0,2020.0

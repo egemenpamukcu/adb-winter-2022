@@ -1,0 +1,366 @@
+iso,country_name,year,CRI score,Fatalities (Rank),Fatalities per 100 000 inhabitants (Rank),Losses in million US$ (PPP) (Rank),Losses per unit GDP in % (Rank),data_source
+ALB,Albania,2018,108.0,102,87,124,124,Germanwatch
+DZA,Algeria,2018,93.83,47,76,110,127,Germanwatch
+AGO,Angola,2018,76.0,52,72,82,89,Germanwatch
+ATG,Antigua and Barbuda,2018,125.0,115,115,135,135,Germanwatch
+ARG,Argentina,2018,48.33,61,101,5,11,Germanwatch
+ARM,Armenia,2018,125.0,115,115,135,135,Germanwatch
+AUS,Australia,2018,49.5,62,86,11,26,Germanwatch
+AUT,Austria,2018,56.0,88,89,20,25,Germanwatch
+AZE,Azerbaijan,2018,125.0,115,115,135,135,Germanwatch
+BHR,Bahrain,2018,125.0,115,115,135,135,Germanwatch
+BGD,Bangladesh,2018,85.5,18,79,97,120,Germanwatch
+BRB,Barbados,2018,125.0,115,115,135,135,Germanwatch
+BLR,Belarus,2018,111.83,115,115,102,112,Germanwatch
+BEL,Belgium,2018,81.83,102,112,39,63,Germanwatch
+BLZ,Belize,2018,125.0,115,115,135,135,Germanwatch
+BEN,Benin,2018,88.0,77,77,109,94,Germanwatch
+BTN,Bhutan,2018,125.0,115,115,135,135,Germanwatch
+BOL,Bolivia,2018,63.5,71,66,62,58,Germanwatch
+BIH,Bosnia and Herzegovina,2018,109.67,115,115,113,100,Germanwatch
+BWA,Botswana,2018,125.0,115,115,135,135,Germanwatch
+BRA,Brazil,2018,82.83,38,105,43,103,Germanwatch
+BRN,Brunei Darussalam,2018,125.0,115,115,135,135,Germanwatch
+BGR,Bulgaria,2018,101.0,115,115,85,88,Germanwatch
+BFA,Burkina Faso,2018,125.0,115,115,135,135,Germanwatch
+BDI,Burundi,2018,36.33,50,32,72,16,Germanwatch
+KHM,Cambodia,2018,47.67,29,17,79,72,Germanwatch
+CMR,Cameroon,2018,105.83,64,91,129,130,Germanwatch
+CAN,Canada,2018,21.83,13,19,12,34,Germanwatch
+CPV,Cape Verde,2018,125.0,115,115,135,135,Germanwatch
+CAF,Central African Republic,2018,71.17,77,51,116,66,Germanwatch
+TCD,Chad,2018,125.0,115,115,135,135,Germanwatch
+CHL,Chile,2018,81.17,115,115,36,53,Germanwatch
+CHN,China,2018,45.17,5,94,4,37,Germanwatch
+TWN,Chinese Taipei,2018,72.33,53,65,55,98,Germanwatch
+COL,Colombia,2018,61.0,20,39,70,99,Germanwatch
+COM,Comoros,2018,125.0,115,115,135,135,Germanwatch
+CRI,Costa Rica,2018,84.67,93,82,87,82,Germanwatch
+,Côte d'Ivoire,2018,89.5,46,55,125,128,Germanwatch
+HRV,Croatia,2018,108.33,115,115,101,102,Germanwatch
+CYP,Cyprus,2018,73.5,81,13,120,107,Germanwatch
+CZE,Czech Republic,2018,46.83,71,63,28,28,Germanwatch
+COD,Democratic Republic of Congo,2018,69.83,24,69,91,83,Germanwatch
+TLS,Democratic Republic of Timor-Leste,2018,125.0,115,115,135,135,Germanwatch
+DNK,Denmark,2018,61.33,93,88,33,33,Germanwatch
+DJI,Djibouti,2018,44.67,93,27,81,20,Germanwatch
+DMA,Dominica,2018,125.0,115,115,135,135,Germanwatch
+DOM,Dominican Republic,2018,86.5,81,84,84,93,Germanwatch
+ECU,Ecuador,2018,97.0,62,73,122,126,Germanwatch
+EGY,Egypt,2018,113.67,115,115,93,122,Germanwatch
+SLV,El Salvador,2018,44.33,71,49,49,24,Germanwatch
+ERI,Eritrea,2018,125.0,115,115,135,135,Germanwatch
+EST,Estonia,2018,90.5,115,115,76,61,Germanwatch
+SWZ,Eswatini,2018,96.67,102,54,128,121,Germanwatch
+ETH,Ethiopia,2018,62.83,26,70,63,74,Germanwatch
+FJI,Fiji,2018,22.5,64,6,47,6,Germanwatch
+FIN,Finland,2018,125.0,115,115,135,135,Germanwatch
+FRA,France,2018,46.17,32,62,13,54,Germanwatch
+GAB,Gabon,2018,125.0,115,115,135,135,Germanwatch
+GEO,Georgia,2018,97.83,115,115,92,75,Germanwatch
+DEU,Germany,2018,13.83,3,1,6,36,Germanwatch
+GHA,Ghana,2018,68.33,22,24,108,116,Germanwatch
+GRC,Greece,2018,23.67,14,4,38,41,Germanwatch
+GRD,Grenada,2018,70.5,102,5,127,92,Germanwatch
+GTM,Guatemala,2018,77.33,102,113,46,45,Germanwatch
+GIN,Guinea,2018,125.0,115,115,135,135,Germanwatch
+GNB,Guinea-Bissau,2018,47.5,55,7,112,52,Germanwatch
+GUY,Guyana,2018,125.0,115,115,135,135,Germanwatch
+HTI,Haiti,2018,88.67,81,85,111,85,Germanwatch
+HND,Honduras,2018,51.67,48,25,78,67,Germanwatch
+HUN,Hungary,2018,107.17,81,81,134,133,Germanwatch
+ISL,Iceland,2018,125.0,115,115,135,135,Germanwatch
+IND,India,2018,18.17,1,34,2,19,Germanwatch
+IDN,Indonesia,2018,68.17,11,74,42,104,Germanwatch
+IRQ,Iraq,2018,68.5,41,58,64,95,Germanwatch
+IRL,Ireland,2018,76.5,93,80,54,76,Germanwatch
+AFG,Islamic Republic of Afghanistan,2018,36.0,15,21,61,49,Germanwatch
+IRN,Islamic Republic of Iran,2018,64.83,48,100,21,60,Germanwatch
+ISR,Israel,2018,89.5,60,41,131,132,Germanwatch
+ITA,Italy,2018,33.67,28,56,8,27,Germanwatch
+JAM,Jamaica,2018,109.5,115,115,118,97,Germanwatch
+JPN,Japan,2018,5.5,2,2,3,12,Germanwatch
+JOR,Jordan,2018,56.33,38,16,94,87,Germanwatch
+KAZ,Kazakhstan,2018,98.5,115,115,66,90,Germanwatch
+KEN,Kenya,2018,19.67,12,23,26,17,Germanwatch
+KIR,Kiribati,2018,125.0,115,115,135,135,Germanwatch
+,"Korea, Republic of",2018,76.5,34,57,75,118,Germanwatch
+,Kosovo,2018,125.0,115,115,135,135,Germanwatch
+KWT,Kuwait,2018,62.83,102,102,25,23,Germanwatch
+KGZ,Kyrgyz Republic,2018,117.5,102,106,133,129,Germanwatch
+LAO,Lao People's Democratic Republic,2018,35.5,26,8,69,51,Germanwatch
+LVA,Latvia,2018,50.0,102,75,32,8,Germanwatch
+LBN,Lebanon,2018,67.17,50,18,105,106,Germanwatch
+LSO,Lesotho,2018,61.5,58,11,121,84,Germanwatch
+LBR,Liberia,2018,125.0,115,115,135,135,Germanwatch
+LBY,Libya,2018,125.0,115,115,135,135,Germanwatch
+LTU,Lithuania,2018,29.33,77,28,23,10,Germanwatch
+LUX,Luxembourg,2018,84.33,115,115,65,48,Germanwatch
+MDG,Madagascar,2018,15.83,17,20,30,4,Germanwatch
+MWI,Malawi,2018,83.67,77,96,95,69,Germanwatch
+MYS,Malaysia,2018,84.83,45,61,96,123,Germanwatch
+MDV,Maldives,2018,103.33,115,115,119,78,Germanwatch
+MLI,Mali,2018,125.0,115,115,135,135,Germanwatch
+MLT,Malta,2018,125.0,115,115,135,135,Germanwatch
+MHL,Marshall Islands,2018,125.0,115,115,135,135,Germanwatch
+MRT,Mauritania,2018,101.0,115,115,107,77,Germanwatch
+MUS,Mauritius,2018,78.83,115,115,68,30,Germanwatch
+MEX,Mexico,2018,37.67,10,44,14,57,Germanwatch
+FSM,Micronesia,2018,125.0,115,115,135,135,Germanwatch
+MDA,Moldova,2018,125.0,115,115,135,135,Germanwatch
+MNG,Mongolia,2018,26.67,64,22,34,9,Germanwatch
+MNE,Montenegro,2018,98.17,115,115,104,70,Germanwatch
+MAR,Morocco,2018,125.0,115,115,135,135,Germanwatch
+MOZ,Mozambique,2018,61.17,56,78,71,42,Germanwatch
+MMR,Myanmar,2018,53.83,20,43,59,79,Germanwatch
+NAM,Namibia,2018,79.17,88,40,115,96,Germanwatch
+NPL,Nepal,2018,29.67,8,10,56,47,Germanwatch
+NLD,Netherlands,2018,67.17,81,99,24,50,Germanwatch
+NZL,New Zealand,2018,53.17,88,68,37,29,Germanwatch
+NIC,Nicaragua,2018,60.17,64,42,83,65,Germanwatch
+NER,Niger,2018,39.67,31,26,77,39,Germanwatch
+NGA,Nigeria,2018,28.83,7,31,16,44,Germanwatch
+MKD,North Macedonia,2018,125.0,115,115,135,135,Germanwatch
+NOR,Norway,2018,84.0,102,104,48,73,Germanwatch
+OMN,Oman,2018,24.33,71,30,9,3,Germanwatch
+PAK,Pakistan,2018,87.83,19,90,90,119,Germanwatch
+PAN,Panama,2018,83.33,75,37,117,117,Germanwatch
+PNG,Papua New Guinea,2018,125.0,115,115,135,135,Germanwatch
+PRY,Paraguay,2018,109.33,102,107,114,113,Germanwatch
+PER,Peru,2018,94.0,64,97,86,110,Germanwatch
+PHL,Philippines,2018,11.17,4,14,7,14,Germanwatch
+POL,Poland,2018,49.0,42,60,22,55,Germanwatch
+PRT,Portugal,2018,70.67,88,92,40,56,Germanwatch
+PRI,Puerto Rico,2018,107.67,115,115,99,101,Germanwatch
+QAT,Qatar,2018,125.0,115,115,135,135,Germanwatch
+COG,Republic of Congo,2018,125.0,115,115,135,135,Germanwatch
+YEM,Republic of Yemen,2018,41.33,35,38,57,40,Germanwatch
+ROU,Romania,2018,81.67,58,67,80,109,Germanwatch
+RUS,Russia,2018,75.5,44,103,31,86,Germanwatch
+RWA,Rwanda,2018,21.17,16,9,51,21,Germanwatch
+WSM,Samoa,2018,70.5,115,115,74,2,Germanwatch
+SAU,Saudi Arabia,2018,88.5,37,48,130,134,Germanwatch
+SEN,Senegal,2018,104.5,115,115,100,91,Germanwatch
+SRB,Serbia,2018,65.5,93,93,44,35,Germanwatch
+SYC,Seychelles,2018,125.0,115,115,135,135,Germanwatch
+SLE,Sierra Leone,2018,125.0,115,115,135,135,Germanwatch
+SGP,Singapore,2018,125.0,115,115,135,135,Germanwatch
+SVK,Slovak Republic,2018,88.33,64,36,132,131,Germanwatch
+SVN,Slovenia,2018,57.83,93,52,58,46,Germanwatch
+SLB,Solomon Islands,2018,43.17,88,12,103,22,Germanwatch
+ZAF,South Africa,2018,53.33,53,95,15,31,Germanwatch
+SSD,South Sudan,2018,116.0,115,115,123,114,Germanwatch
+ESP,Spain,2018,47.67,33,53,19,64,Germanwatch
+LKA,Sri Lanka,2018,19.0,36,29,10,5,Germanwatch
+KNA,St. Kitts and Nevis,2018,125.0,115,115,135,135,Germanwatch
+LCA,St. Lucia,2018,125.0,115,115,135,135,Germanwatch
+,St. Vincent and the Grena- dines,2018,125.0,115,115,135,135,Germanwatch
+SDN,Sudan,2018,49.33,30,45,52,62,Germanwatch
+SUR,Suriname,2018,125.0,115,115,135,135,Germanwatch
+SWE,Sweden,2018,89.0,102,111,50,80,Germanwatch
+CHE,Switzerland,2018,73.67,93,98,35,59,Germanwatch
+TJK,Tajikistan,2018,71.17,75,64,88,68,Germanwatch
+TZA,Tanzania,2018,69.83,42,71,73,81,Germanwatch
+THA,Thailand,2018,68.83,25,59,60,105,Germanwatch
+BHS,The Bahamas,2018,125.0,115,115,135,135,Germanwatch
+GMB,The Gambia,2018,125.0,115,115,135,135,Germanwatch
+TGO,Togo,2018,125.0,115,115,135,135,Germanwatch
+TON,Tonga,2018,25.17,102,3,41,1,Germanwatch
+TTO,Trinidad and Tobago,2018,81.33,115,115,67,38,Germanwatch
+TUN,Tunisia,2018,46.83,56,47,45,43,Germanwatch
+TUR,Turkey,2018,79.17,40,83,53,108,Germanwatch
+TUV,Tuvalu,2018,125.0,115,115,135,135,Germanwatch
+UGA,Uganda,2018,24.67,23,35,29,13,Germanwatch
+UKR,Ukraine,2018,105.33,93,114,89,111,Germanwatch
+ARE,United Arab Emirates,2018,125.0,115,115,135,135,Germanwatch
+GBR,United Kingdom,2018,73.83,64,110,17,71,Germanwatch
+,United States,2018,23.83,6,50,1,18,Germanwatch
+URY,Uruguay,2018,35.67,81,46,27,7,Germanwatch
+UZB,Uzbekistan,2018,125.0,115,115,135,135,Germanwatch
+VUT,Vanuatu,2018,44.67,102,15,106,15,Germanwatch
+VEN,Venezuela,2018,104.17,81,108,98,115,Germanwatch
+VNM,Vietnam,2018,26.17,9,33,18,32,Germanwatch
+ZMB,Zambia,2018,125.0,115,115,135,135,Germanwatch
+ZWE,Zimbabwe,2018,114.5,93,109,126,125,Germanwatch
+ALB,Albania,2019,118.0,106,106,130,130,Germanwatch
+DZA,Algeria,2019,105.17,65,95,122,127,Germanwatch
+AGO,Angola,2019,32.33,44,50,22,14,Germanwatch
+ATG,Antigua and Barbuda,2019,118.0,106,106,130,130,Germanwatch
+ARG,Argentina,2019,60.0,60,86,28,50,Germanwatch
+ARM,Armenia,2019,98.17,90,62,125,125,Germanwatch
+AUS,Australia,2019,28.0,37,37,9,24,Germanwatch
+AUT,Austria,2019,56.83,84,79,25,37,Germanwatch
+AZE,Azerbaijan,2019,118.0,106,106,130,130,Germanwatch
+BHR,Bahrain,2019,118.0,106,106,130,130,Germanwatch
+BGD,Bangladesh,2019,23.5,7,29,20,28,Germanwatch
+BRB,Barbados,2019,118.0,106,106,130,130,Germanwatch
+BLR,Belarus,2019,118.0,106,106,130,130,Germanwatch
+BEL,Belgium,2019,66.0,84,85,36,53,Germanwatch
+BLZ,Belize,2019,118.0,106,106,130,130,Germanwatch
+BEN,Benin,2019,118.0,106,106,130,130,Germanwatch
+BTN,Bhutan,2019,118.0,106,106,130,130,Germanwatch
+BOL,Bolivia,2019,19.67,43,15,27,9,Germanwatch
+BIH,Bosnia and Herzegovina,2019,57.83,98,82,45,20,Germanwatch
+BWA,Botswana,2019,99.83,106,106,107,87,Germanwatch
+BRA,Brazil,2019,33.67,5,32,17,58,Germanwatch
+BRN,Brunei Darussalam,2019,118.0,106,106,130,130,Germanwatch
+BGR,Bulgaria,2019,101.0,98,96,98,109,Germanwatch
+BFA,Burkina Faso,2019,118.0,106,106,130,130,Germanwatch
+BDI,Burundi,2019,61.83,26,10,121,102,Germanwatch
+KHM,Cambodia,2019,75.83,60,63,97,86,Germanwatch
+CMR,Cameroon,2019,67.33,32,27,104,107,Germanwatch
+CAN,Canada,2019,65.67,90,104,16,40,Germanwatch
+CPV,Cape Verde,2019,118.0,106,106,130,130,Germanwatch
+CAF,Central African Republic,2019,67.5,98,92,89,17,Germanwatch
+TCD,Chad,2019,118.0,106,106,130,130,Germanwatch
+CHL,Chile,2019,33.0,52,59,12,8,Germanwatch
+CHN,China,2019,42.83,4,83,3,42,Germanwatch
+TWN,Chinese Taipei,2019,99.67,84,98,80,119,Germanwatch
+COL,Colombia,2019,36.33,17,18,37,64,Germanwatch
+COM,Comoros,2019,25.33,67,6,65,4,Germanwatch
+CRI,Costa Rica,2019,118.0,106,106,130,130,Germanwatch
+CIV,Cote d'Ivoire,2019,111.67,84,101,128,128,Germanwatch
+HRV,Croatia,2019,75.17,106,106,51,41,Germanwatch
+CYP,Cyprus,2019,118.0,106,106,130,130,Germanwatch
+CZE,Czech Republic,2019,92.83,106,106,63,88,Germanwatch
+COD,Democratic Republic of Congo,2019,58.67,14,41,90,83,Germanwatch
+TLS,Democratic Republic of Timor-Leste,2019,118.0,106,106,130,130,Germanwatch
+DNK,Denmark,2019,75.5,72,49,75,104,Germanwatch
+DJI,Djibouti,2019,73.0,64,5,124,120,Germanwatch
+DMA,Dominica,2019,77.67,106,106,110,19,Germanwatch
+DOM,Dominican Republic,2019,118.0,106,106,130,130,Germanwatch
+ECU,Ecuador,2019,103.83,98,103,95,112,Germanwatch
+EGY,Egypt,2019,102.0,58,99,112,122,Germanwatch
+SLV,El Salvador,2019,91.83,80,67,111,113,Germanwatch
+ERI,Eritrea,2019,118.0,106,106,130,130,Germanwatch
+EST,Estonia,2019,75.67,98,60,92,72,Germanwatch
+SWZ,Eswatini,2019,118.0,106,106,130,130,Germanwatch
+ETH,Ethiopia,2019,69.33,39,74,67,81,Germanwatch
+FJI,Fiji,2019,73.0,90,23,118,92,Germanwatch
+FIN,Finland,2019,97.83,106,106,73,98,Germanwatch
+FRA,France,2019,52.5,41,68,18,60,Germanwatch
+GAB,Gabon,2019,118.0,106,106,130,130,Germanwatch
+GEO,Georgia,2019,93.17,106,106,91,75,Germanwatch
+DEU,Germany,2019,61.33,65,102,11,44,Germanwatch
+GHA,Ghana,2019,53.33,29,30,71,80,Germanwatch
+GRC,Greece,2019,45.0,50,34,44,54,Germanwatch
+GRD,Grenada,2019,118.0,106,106,130,130,Germanwatch
+GTM,Guatemala,2019,65.67,60,66,66,68,Germanwatch
+GIN,Guinea,2019,99.17,72,72,127,126,Germanwatch
+GNB,Guinea-Bissau,2019,118.0,106,106,130,130,Germanwatch
+GUY,Guyana,2019,118.0,106,106,130,130,Germanwatch
+HTI,Haiti,2019,58.33,60,51,94,47,Germanwatch
+HND,Honduras,2019,73.33,90,93,72,46,Germanwatch
+HUN,Hungary,2019,85.83,106,106,55,71,Germanwatch
+ISL,Iceland,2019,88.83,106,106,101,57,Germanwatch
+IND,India,2019,16.67,1,36,1,13,Germanwatch
+IDN,Indonesia,2019,24.83,3,31,6,39,Germanwatch
+IRQ,Iraq,2019,84.33,56,77,76,110,Germanwatch
+IRL,Ireland,2019,104.5,106,106,81,114,Germanwatch
+AFG,Islamic Republic of Afghanistan,2019,16.0,11,11,33,15,Germanwatch
+IRN,Islamic Republic of Iran,2019,27.0,22,45,8,21,Germanwatch
+ISR,Israel,2019,108.83,90,88,129,129,Germanwatch
+ITA,Italy,2019,43.5,46,70,7,34,Germanwatch
+JAM,Jamaica,2019,118.0,106,106,130,130,Germanwatch
+JPN,Japan,2019,14.5,9,20,2,18,Germanwatch
+JOR,Jordan,2019,118.0,106,106,130,130,Germanwatch
+KAZ,Kazakhstan,2019,118.0,106,106,130,130,Germanwatch
+KEN,Kenya,2019,33.0,15,16,49,51,Germanwatch
+KIR,Kiribati,2019,118.0,106,106,130,130,Germanwatch
+KOR,Korea. Republic of,2019,64.0,52,81,24,73,Germanwatch
+,Kosovo,2019,118.0,106,106,130,130,Germanwatch
+KWT,Kuwait,2019,118.0,106,106,130,130,Germanwatch
+KGZ,Kyrgyz Republic,2019,118.0,106,106,130,130,Germanwatch
+LAO,Lao People's Democratic Republic,2019,55.17,57,28,86,66,Germanwatch
+LVA,Latvia,2019,86.83,106,106,79,62,Germanwatch
+LBN,Lebanon,2019,54.67,72,55,60,43,Germanwatch
+LSO,Lesotho,2019,64.67,106,106,58,6,Germanwatch
+LBR,Liberia,2019,89.5,106,106,109,55,Germanwatch
+LBY,Libya,2019,73.67,67,48,93,93,Germanwatch
+LTU,Lithuania,2019,118.0,106,106,130,130,Germanwatch
+LUX,Luxembourg,2019,72.83,106,106,53,33,Germanwatch
+MDG,Madagascar,2019,40.33,19,14,83,56,Germanwatch
+MWI,Malawi,2019,15.17,20,13,35,5,Germanwatch
+MYS,Malaysia,2019,87.33,58,78,74,118,Germanwatch
+MDV,Maldives,2019,97.33,106,106,114,76,Germanwatch
+MLI,Mali,2019,79.67,52,58,108,101,Germanwatch
+MLT,Malta,2019,67.33,106,106,54,16,Germanwatch
+MHL,Marshall Islands,2019,118.0,106,106,130,130,Germanwatch
+MRT,Mauritania,2019,63.0,76,44,96,59,Germanwatch
+MUS,Mauritius,2019,105.17,106,106,113,100,Germanwatch
+MEX,Mexico,2019,59.5,31,73,26,77,Germanwatch
+FSM,Micronesia,2019,118.0,106,106,130,130,Germanwatch
+MDA,Moldova,2019,118.0,106,106,130,130,Germanwatch
+MNG,Mongolia,2019,31.67,50,9,62,30,Germanwatch
+MNE,Montenegro,2019,78.0,80,8,126,123,Germanwatch
+MAR,Morocco,2019,79.67,35,42,117,121,Germanwatch
+MOZ,Mozambique,2019,2.67,2,3,4,2,Germanwatch
+MMR,Myanmar,2019,31.33,24,38,30,29,Germanwatch
+NAM,Namibia,2019,98.17,98,75,119,111,Germanwatch
+NPL,Nepal,2019,20.0,10,7,42,27,Germanwatch
+NLD,Netherlands,2019,97.17,106,106,59,103,Germanwatch
+NZL,New Zealand,2019,66.33,90,76,52,52,Germanwatch
+NIC,Nicaragua,2019,58.0,72,52,82,45,Germanwatch
+NER,Niger,2019,18.17,17,12,46,11,Germanwatch
+NGA,Nigeria,2019,70.0,27,84,47,89,Germanwatch
+MKD,North Macedonia,2019,118.0,106,106,130,130,Germanwatch
+NOR,Norway,2019,92.33,98,94,70,99,Germanwatch
+OMN,Oman,2019,84.67,67,35,123,124,Germanwatch
+PAK,Pakistan,2019,25.0,8,39,14,25,Germanwatch
+PAN,Panama,2019,108.33,106,106,102,115,Germanwatch
+PNG,Papua New Guinea,2019,58.67,49,17,105,82,Germanwatch
+PRY,Paraguay,2019,30.0,52,22,38,23,Germanwatch
+PER,Peru,2019,56.33,37,43,57,79,Germanwatch
+PHL,Philippines,2019,26.67,13,40,15,26,Germanwatch
+POL,Poland,2019,80.0,76,97,40,85,Germanwatch
+PRT,Portugal,2019,48.33,67,61,29,36,Germanwatch
+PRI,Puerto Rico,2019,118.0,106,106,130,130,Germanwatch
+QAT,Qatar,2019,118.0,106,106,130,130,Germanwatch
+COG,Republic of Congo,2019,97.17,98,89,115,96,Germanwatch
+YEM,Republic of Yemen,2019,59.33,42,46,84,69,Germanwatch
+ROU,Romania,2019,104.5,106,106,77,116,Germanwatch
+RUS,Russia,2019,50.67,33,80,13,49,Germanwatch
+RWA,Rwanda,2019,53.33,45,21,99,67,Germanwatch
+WSM,Samoa,2019,118.0,106,106,130,130,Germanwatch
+SAU,Saudi Arabia,2019,73.0,48,65,50,105,Germanwatch
+SEN,Senegal,2019,67.5,106,106,43,22,Germanwatch
+SRB,Serbia,2019,92.0,106,106,78,78,Germanwatch
+SYC,Seychelles,2019,118.0,106,106,130,130,Germanwatch
+SLE,Sierra Leone,2019,76.5,67,54,116,84,Germanwatch
+SGP,Singapore,2019,118.0,106,106,130,130,Germanwatch
+SVK,Slovak Republic,2019,77.17,76,53,87,97,Germanwatch
+SVN,Slovenia,2019,91.83,106,106,85,74,Germanwatch
+SLB,Solomon Islands,2019,118.0,106,106,130,130,Germanwatch
+ZAF,South Africa,2019,32.5,16,26,31,48,Germanwatch
+SSD,South Sudan,2019,17.33,12,4,64,10,Germanwatch
+ESP,Spain,2019,42.83,47,69,10,31,Germanwatch
+LKA,Sri Lanka,2019,41.83,33,24,48,61,Germanwatch
+KNA,St. Kitts and Nevis,2019,118.0,106,106,130,130,Germanwatch
+LCA,St. Lucia,2019,118.0,106,106,130,130,Germanwatch
+VCT,St. Vincent and the Grenadines,2019,118.0,106,106,130,130,Germanwatch
+SDN,Sudan,2019,19.83,22,25,23,12,Germanwatch
+SUR,Suriname,2019,118.0,106,106,130,130,Germanwatch
+SWE,Sweden,2019,100.5,106,106,69,108,Germanwatch
+CHE,Switzerland,2019,85.5,90,87,61,94,Germanwatch
+TJK,Tajikistan,2019,104.33,90,91,120,117,Germanwatch
+TZA,Tanzania,2019,66.5,27,47,88,95,Germanwatch
+THA,Thailand,2019,43.17,36,64,19,38,Germanwatch
+BHS,The Bahamas,2019,6.5,30,l,5,l,Germanwatch
+GMB,The Gambia,2019,53.17,80,33,103,35,Germanwatch
+TGO,Togo,2019,118.0,106,106,130,130,Germanwatch
+TON,Tonga,2019,118.0,106,106,130,130,Germanwatch
+TTO,Trinidad and Tobago,2019,118.0,106,106,130,130,Germanwatch
+TUN,Tunisia,2019,118.0,106,106,130,130,Germanwatch
+TUR,Turkey,2019,66.0,40,71,34,90,Germanwatch
+TUV,Tuvalu,2019,118.0,106,106,130,130,Germanwatch
+UGA,Uganda,2019,42.17,21,19,68,63,Germanwatch
+UKR,Ukraine,2019,76.17,76,100,41,70,Germanwatch
+ARE,United Arab Emirates,2019,118.0,106,106,130,130,Germanwatch
+GBR,United Kingdom,2019,90.83,84,105,39,106,Germanwatch
+URY,Uruguay,2019,79.67,84,56,100,91,Germanwatch
+UZB,Uzbekistan,2019,118.0,106,106,130,130,Germanwatch
+VUT,Vanuatu,2019,73.0,106,106,106,7,Germanwatch
+VEN,Venezuela,2019,118.0,106,106,130,130,Germanwatch
+VNM,Vietnam,2019,50.17,25,57,32,65,Germanwatch
+ZMB,Zambia,2019,63.33,80,90,56,32,Germanwatch
+ZWE,Zimbabwe,2019,6.17,6,2,21,3,Germanwatch

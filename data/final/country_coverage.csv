@@ -1,0 +1,50 @@
+iso,country_name,completeness,value.Control of Corruption: Estimate,value.Government Effectiveness: Estimate,value.Rule of Law: Estimate,conflict_stock_displacement_raw,disaster_stock_displacementr_raw,AIR,CCH,ims_both_sex,estimated_refugee_stock_incl_asylum_seekers_both_sexes,GDP per capita (constant 2015 US$),D12,D_avg,hdi_value,value.Gini index (World Bank estimate),P1: State Legitimacy
+TWN,"Taiwan, Province of China",0.26666666666666666,False,False,False,True,True,True,True,False,False,False,False,False,False,False,False
+NIU,Niue,0.3333333333333333,True,True,True,False,False,True,False,True,False,False,False,False,False,False,False
+SGP,Singapore,0.4,False,False,False,False,False,True,True,True,False,True,False,False,True,False,True
+COK,Cook Islands,0.4666666666666667,True,True,True,True,True,True,False,True,False,False,False,False,False,False,False
+TUV,Tuvalu,0.6666666666666666,True,True,True,True,True,True,False,False,False,True,True,True,False,True,False
+NRU,Nauru,0.6666666666666666,True,True,True,False,False,True,False,True,True,True,True,True,False,True,False
+BRN,Brunei Darussalam,0.7333333333333333,True,True,True,True,True,True,True,True,False,True,False,False,True,False,True
+KIR,Kiribati,0.7333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,False,False,False
+HKG,Hong Kong,0.7333333333333333,True,True,True,True,True,True,True,True,True,True,False,False,True,False,False
+PLW,Palau,0.8,True,True,True,True,True,True,True,True,False,True,True,True,True,False,False
+NZL,New Zealand,0.8,True,True,True,True,True,True,True,True,True,True,False,False,True,False,True
+MHL,Marshall Islands,0.8,True,True,True,True,True,True,True,True,False,True,True,True,True,False,False
+TKM,Turkmenistan,0.8,True,True,True,True,True,True,True,True,True,True,False,False,True,False,True
+AZE,Azerbaijan,0.8,True,True,True,True,True,True,True,True,True,True,False,False,True,False,True
+VNM,Viet Nam,0.8,True,True,True,True,True,True,True,True,False,True,False,False,True,True,True
+THA,Thailand,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+LKA,Sri Lanka,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+KOR,"Korea, Republic of",0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+PHL,Philippines,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+CHN,China,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+ARM,Armenia,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+AUS,Australia,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+GEO,Georgia,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+FJI,Fiji,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+KAZ,Kazakhstan,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+IND,India,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+IDN,Indonesia,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+JPN,Japan,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+VUT,Vanuatu,0.8666666666666667,True,True,True,True,True,True,True,True,False,True,True,True,True,True,False
+MYS,Malaysia,0.8666666666666667,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True
+TON,Tonga,0.8666666666666667,True,True,True,True,True,True,True,True,False,True,True,True,True,True,False
+LAO,Lao People's Democratic Republic,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+PNG,Papua New Guinea,0.9333333333333333,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True
+FSM,"Micronesia, Federated States of",0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+KHM,Cambodia,0.9333333333333333,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True
+WSM,Samoa,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+SLB,Solomon Islands,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+MDV,Maldives,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+AFG,Afghanistan,0.9333333333333333,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True
+MMR,Myanmar,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+TLS,Timor-Leste,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+UZB,Uzbekistan,0.9333333333333333,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True
+BTN,Bhutan,0.9333333333333333,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True
+NPL,Nepal,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+PAK,Pakistan,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+KGZ,Kyrgyzstan,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+BGD,Bangladesh,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+TJK,Tajikistan,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+MNG,Mongolia,1.0,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True

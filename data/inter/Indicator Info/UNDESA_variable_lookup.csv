@@ -1,0 +1,13 @@
+Type,Abbreviation,Variable,Short name,Order
+Indicator,ims_both_sex,"International migrant stock at mid-year, both sexes combined",ims_both_sex,1
+Indicator,ims_male,"International migrant stock at mid-year, males",ims_male,2
+Indicator,ims_female,"International migrant stock at mid-year, females",ims_female,3
+Indicator,totalpop_both_in_thou,"Total population at mid-year, both sexes combined (thousands)",totalpop_both_in_thou,4
+Indicator,totalpop_male_in_though,"Total population at mid-year, males (thousands)",totalpop_male_in_though,5
+Indicator,totalpop_female_in_thou,"Total population at mid-year, females (thousands)",totalpop_female_in_thou,6
+Indicator,ims_percent_totalpop_both_sex,"International migrant stock as a percentage of the total population, both sexes combined",ims_percent_totalpop_both_sex,7
+Indicator,ims_percent_totalpop_male,"International migrant stock as a percentage of the total population, males",ims_percent_totalpop_male,8
+Indicator,ims_percent_totalpop_female,"International migrant stock as a percentage of the total population, females",ims_percent_totalpop_female,9
+Indicator,female_migrants_perc_ims,Female migrants as a percentage of the international migrant stock,female_migrants_perc_ims,10
+Indicator,estimated_refugee_stock_incl_asylum_seekers_both_sexes,"Refugee and asylum seekers at mid-year, both sexes combined",estimated_refugee_stock_incl_asylum_seekers_both_sexes,11
+Indicator,refugees_asylum_seekers_perc_ims,Refugee and asylum seekers as a percentage of the international migrant stock,refugees_asylum_seekers_perc_ims,12

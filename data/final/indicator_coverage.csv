@@ -1,0 +1,16 @@
+variable,coverage
+value.Control of Corruption: Estimate,0.9591836734693877
+value.Government Effectiveness: Estimate,0.9591836734693877
+value.Rule of Law: Estimate,0.9591836734693877
+conflict_stock_displacement_raw,0.9387755102040817
+disaster_stock_displacementr_raw,0.9387755102040817
+AIR,1.0
+CCH,0.9183673469387755
+ims_both_sex,0.9591836734693877
+estimated_refugee_stock_incl_asylum_seekers_both_sexes,0.5918367346938775
+GDP per capita (constant 2015 US$),0.9387755102040817
+D12,0.5102040816326531
+D_avg,0.5102040816326531
+hdi_value,0.8775510204081632
+value.Gini index (World Bank estimate),0.673469387755102
+P1: State Legitimacy,0.7755102040816326
