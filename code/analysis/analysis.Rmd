@@ -17,23 +17,14 @@ library(corrplot)
 library(naniar)
 library(corrplot)
 library(stargazer)
+library(htmltools)
 ```
 
 ## Loading Data
 ```{r}
-df <- read_csv("../data/cleaned-datasets/final/small_data_imputed.csv")
-
-cols <-  c('iso', 'country_name', 'year')
-
-migration <- c('ims_both_sex', 'estimated_refugee_stock_incl_asylum_seekers_both_sexes', 'disaster_stock_displacementr_raw', 'conflict_stock_displacement_raw')
-
-climate <- c('CCH', 'AIR', 'hdi_value')
-
-governance <- c('value.Rule of Law: Estimate', 'value.Government Effectiveness: Estimate', 'value.Control of Corruption: Estimate')
-
-ys <- c('P1: State Legitimacy', 'D_avg', 'D12')
-
-controls <- c('GDP per capita (constant 2015 US$)', 'value.Gini index (World Bank estimate)')
+df <- read_csv("../../data/final/small_data_imputed.csv")
+output.fig.dir <- "../../output/figures"
+output.tab.dir <- "../../output/tables"
 
 df <- df %>% 
   rename(migrant_stock=ims_both_sex, 
@@ -54,25 +45,51 @@ df <- df %>%
          disaster_displacement=disaster_displacement/10000,
          migrant_stock=migrant_stock/10000,
          refugee_stock=refugee_stock/10000,
-         gdp=gdp/1000)
+         gdp=gdp/1000,
+         state_legit=100-state_legit)
+
+col_names <- c('migrant_stock'='Migrant Stock (10,000s)', 
+               'refugee_stock'='Refugee Stock (10,000s)',
+               'disaster_displacement'='Internal Displacement Due to Disasters (10,000s)',
+               'conflict_displacement'='Internal Displacement Due to Conflict (10,000s)', 
+               'climate_change'='Climate Change', 
+               'air_quality'='Air Quality', 
+               'rule_of_law'='Rule of Law', 
+               'gov_effectiveness'='Government Effectiveness', 
+               'corruption_control'='Control of Corruption',
+               'state_legit'='State Legitimacy', 
+               'cpa_d_12'='CPA: D-12', 
+               'cpa_d_avg'='CPA: Cluster D Average', 
+               'gdp'='GDP Per Capita (1,000s)', 
+               'hdi_value'="HDI",
+               'gini'="Gini Index") 
 
 names(df)
 ```
 
 ## Descriptive Statistics
+### Missingness
 ```{r}
-vis_miss(df, sort_miss = T)
+vis_miss(df, sort_miss = T) + 
+  ylab("Countries") + 
+  theme(axis.text.y = element_blank(),
+        axis.ticks.x = element_line(),
+        panel.grid = element_blank(), 
+        axis.text.x = element_text(angle=90))
+  
+
+ggsave(paste(output.fig.dir, '/missingness.png', sep=''), width = 5, height = 8)
 ```
 
+### Summary Statistics
 ```{r}
 head(sumtable(df, out='return'), 10)
+# sumtable(df, out='htmlreturn', file=paste(output.tab.dir, '/summary_table.html', sep=''))
 ```
 
 
+### Correlation Matrix
 ```{r}
-df.cpa <- df %>% 
-  drop_na('cpa_d_avg')
-
 df.rcorr <- df %>% 
   select(-iso, -country_name) %>% 
   as.matrix() %>% 
@@ -81,15 +98,25 @@ df.rcorr <- df %>%
 corrplot(corr=df.rcorr$r,
          p.mat = df.rcorr$P,
          type='lower', insig='pch', sig.level =.1, pch.cex = .9, diag=F,
-         tl.cex=.7, tl.col='black', tl.offset=1, cl.pos='r')
+         tl.cex=.7, tl.col='black', tl.offset=.5, cl.pos='r', win.asp=1)
+
+# {
+#   pdf(file=paste(output.fig.dir, '/corr_matrix.pdf', sep=''))
+#   corrplot(corr=df.rcorr$r,
+#            p.mat = df.rcorr$P,
+#            type='lower', insig='pch', sig.level =.1, pch.cex = .9, diag=F,
+#            tl.cex=.7, tl.col='black', tl.offset=.5, cl.pos='r', win.asp=1)
+#   dev.off()
+# }
+
 ```
 
 ```{r}
-dist_plots <- lapply(names(df %>% 
-                             select(-iso, -country_name)), function(var_x){
+dist_plots <- lapply(names(df %>% select(-iso, -country_name)), function(var_x){
   p <- 
     ggplot(df) +
     aes_string(var_x) +
+    theme_light() +
     theme(
       axis.text = element_blank(),
       axis.title.y = element_blank(),
@@ -104,41 +131,47 @@ dist_plots <- lapply(names(df %>%
 
 
 cowplot::plot_grid(plotlist = dist_plots)
-
-# split into pillars
+ggsave(filename = paste(output.fig.dir, '/distributions.png', sep = ''))
 ```
 
 
 ```{r}
-scatter_plots <- lapply(names(df %>% 
-                             select(-iso, -country_name, -state_legit)), 
-                        function(var_x){
-  ggplot(df, aes_string(x=var_x, y='state_legit')) + 
-  geom_point() +
-  geom_smooth(method='lm', formula='y~x') + 
-  ggrepel::geom_text_repel(label=df$iso)
+lapply(names(df %>% select(-iso, -country_name, -state_legit)), 
+          function(var_x){
+              plt <- ggplot(df, aes_string(x=var_x, y='state_legit')) + 
+              geom_point(colour='orange') +
+              stat_smooth(method='lm', formula='y~x', fullrange=T, color='purple') + 
+              ggrepel::geom_text_repel(label=df$iso) +
+              theme_classic() + 
+              labs(title=paste(col_names[var_x], 'vs.', 'State Legitimacy'))
+              print(plt)
+            
+            ggsave(paste(output.fig.dir, '/state_legit_X_', var_x, '.png', sep=''))
 })
-
-scatter_plots
 # wo afg
 ```
 
 
+```{r}
+df %>% 
+  filter(is.na(gdp))
+```
+
 
 ```{r}
-climate.model <- lm(state_legit ~ climate_change + air_quality + hdi_value, df)
-governance.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control, df)
-migration.model <- lm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement, df)
-full.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value, df)
+climate.model <- lm(state_legit ~ climate_change + air_quality + hdi_value + gdp, df)
+governance.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp + gini, df)
+migration.model <- lm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp + gini, df)
+full.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp + gini, df)
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 ```
 
 ```{r}
-climate.model <- lm(cpa_d_avg ~ climate_change + air_quality + hdi_value, df)
-governance.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control, df)
-migration.model <- lm(cpa_d_avg ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement, df)
-full.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value, df)
+climate.model <- lm(cpa_d_avg ~ climate_change + air_quality + hdi_value + gdp + gini, df)
+governance.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + gdp + gini, df)
+migration.model <- lm(cpa_d_avg ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp + gini, df)
+full.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp + gini, df)
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 ```
