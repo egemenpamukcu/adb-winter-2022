@@ -1,0 +1,449 @@
+country_name,iso,year,"CPIA transparency, accountability, and corruption in the public sector rating (1=low to 6=high)",CPIA quality of public administration rating (1=low to 6=high),CPIA policy and institutions for environmental sustainability rating (1=low to 6=high),data_source
+Afghanistan,AFG,2005,,,,CPIA
+Armenia,ARM,2005,2.5,4,3.5,CPIA
+Bangladesh,BGD,2005,2.5,3,3,CPIA
+Bhutan,BTN,2005,4,4,4.5,CPIA
+Cambodia,KHM,2005,2.5,2.5,2.5,CPIA
+Fiji,FJI,2005,,,,CPIA
+Georgia,GEO,2005,3.5,3.5,3.5,CPIA
+India,IND,2005,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2005,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2005,2.5,2.5,3,CPIA
+Lao PDR,LAO,2005,2,2.5,3.5,CPIA
+Maldives,MDV,2005,3,4,4,CPIA
+Marshall Islands,MHL,2005,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2005,,,,CPIA
+Mongolia,MNG,2005,2.5,3.5,2.5,CPIA
+Myanmar,MMR,2005,,,,CPIA
+Nepal,NPL,2005,2.5,3,3,CPIA
+Pakistan,PAK,2005,2.5,3.5,3.5,CPIA
+Papua New Guinea,PNG,2005,3,3,1.5,CPIA
+Samoa,WSM,2005,4,4,4,CPIA
+Solomon Islands,SLB,2005,3,2,2,CPIA
+Sri Lanka,LKA,2005,3.5,3,3.5,CPIA
+Tajikistan,TJK,2005,2,2.5,2.5,CPIA
+Timor-Leste,TLS,2005,,,,CPIA
+Tuvalu,TUV,2005,,,,CPIA
+Uzbekistan,UZB,2005,1.5,2.5,3.5,CPIA
+Vietnam,VNM,2005,3,3.5,3.5,CPIA
+Vanuatu,VUT,2005,3,2.5,3,CPIA
+Afghanistan,AFG,2006,2.5,2,2,CPIA
+Armenia,ARM,2006,3.5,4,3.5,CPIA
+Bangladesh,BGD,2006,2.5,3,3,CPIA
+Bhutan,BTN,2006,4,4,4.5,CPIA
+Cambodia,KHM,2006,2.5,2.5,3,CPIA
+Fiji,FJI,2006,,,,CPIA
+Georgia,GEO,2006,3.5,3.5,3.5,CPIA
+India,IND,2006,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2006,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2006,2.5,2.5,3,CPIA
+Lao PDR,LAO,2006,2,3,3.5,CPIA
+Maldives,MDV,2006,2.5,4,4,CPIA
+Marshall Islands,MHL,2006,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2006,,,,CPIA
+Mongolia,MNG,2006,2.5,3.5,2.5,CPIA
+Myanmar,MMR,2006,,,,CPIA
+Nepal,NPL,2006,3,3,3,CPIA
+Pakistan,PAK,2006,2.5,3.5,3.5,CPIA
+Papua New Guinea,PNG,2006,3,2.5,1.5,CPIA
+Samoa,WSM,2006,4,4,4,CPIA
+Solomon Islands,SLB,2006,3,2,2,CPIA
+Sri Lanka,LKA,2006,3.5,3,3.5,CPIA
+Tajikistan,TJK,2006,2,2.5,2.5,CPIA
+Timor-Leste,TLS,2006,3,2.5,2,CPIA
+Tuvalu,TUV,2006,,,,CPIA
+Uzbekistan,UZB,2006,1.5,2.5,3.5,CPIA
+Vietnam,VNM,2006,3,3.5,3.5,CPIA
+Vanuatu,VUT,2006,3,2.5,3,CPIA
+Afghanistan,AFG,2007,2,2,2,CPIA
+Armenia,ARM,2007,3.5,4,3.5,CPIA
+Bangladesh,BGD,2007,3,3,3,CPIA
+Bhutan,BTN,2007,4,4,4.5,CPIA
+Cambodia,KHM,2007,2.5,2.5,3,CPIA
+Fiji,FJI,2007,,,,CPIA
+Georgia,GEO,2007,3,3.5,3,CPIA
+India,IND,2007,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2007,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2007,2.5,3,3,CPIA
+Lao PDR,LAO,2007,2,3,3.5,CPIA
+Maldives,MDV,2007,2.5,4,4,CPIA
+Marshall Islands,MHL,2007,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2007,,,,CPIA
+Mongolia,MNG,2007,3,3.5,3,CPIA
+Myanmar,MMR,2007,,,,CPIA
+Nepal,NPL,2007,3,3,3,CPIA
+Pakistan,PAK,2007,2.5,3.5,3.5,CPIA
+Papua New Guinea,PNG,2007,3,2.5,2,CPIA
+Samoa,WSM,2007,4,4,4,CPIA
+Solomon Islands,SLB,2007,3,2,2,CPIA
+Sri Lanka,LKA,2007,3,3,3.5,CPIA
+Tajikistan,TJK,2007,2,2.5,2.5,CPIA
+Timor-Leste,TLS,2007,3,2.5,2.5,CPIA
+Tuvalu,TUV,2007,,,,CPIA
+Uzbekistan,UZB,2007,1.5,2.5,3.5,CPIA
+Vietnam,VNM,2007,3,3.5,3.5,CPIA
+Vanuatu,VUT,2007,3,2.5,3,CPIA
+Afghanistan,AFG,2008,2,2,2.5,CPIA
+Armenia,ARM,2008,3,4,3,CPIA
+Bangladesh,BGD,2008,3,3,3,CPIA
+Bhutan,BTN,2008,4,4,4.5,CPIA
+Cambodia,KHM,2008,2.5,2.5,3,CPIA
+Fiji,FJI,2008,,,,CPIA
+Georgia,GEO,2008,3,4,3,CPIA
+India,IND,2008,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2008,3,3,3,CPIA
+Kyrgyz Republic,KGZ,2008,2.5,3,3,CPIA
+Lao PDR,LAO,2008,2,3,4,CPIA
+Maldives,MDV,2008,2.5,4,4,CPIA
+Marshall Islands,MHL,2008,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2008,,,,CPIA
+Mongolia,MNG,2008,3,3.5,3,CPIA
+Myanmar,MMR,2008,,,,CPIA
+Nepal,NPL,2008,3,3,3,CPIA
+Pakistan,PAK,2008,2.5,3.5,3,CPIA
+Papua New Guinea,PNG,2008,3,2.5,2,CPIA
+Samoa,WSM,2008,4,4,4,CPIA
+Solomon Islands,SLB,2008,3,2,2,CPIA
+Sri Lanka,LKA,2008,3,3,3.5,CPIA
+Tajikistan,TJK,2008,2,2.5,3,CPIA
+Timor-Leste,TLS,2008,3,2.5,2.5,CPIA
+Tuvalu,TUV,2008,,,,CPIA
+Uzbekistan,UZB,2008,1.5,3,3.5,CPIA
+Vietnam,VNM,2008,3,3.5,3.5,CPIA
+Vanuatu,VUT,2008,3,3,3,CPIA
+Afghanistan,AFG,2009,2,2,2.5,CPIA
+Armenia,ARM,2009,3,4,3,CPIA
+Bangladesh,BGD,2009,3,3,3,CPIA
+Bhutan,BTN,2009,4.5,4,4.5,CPIA
+Cambodia,KHM,2009,2,2.5,3,CPIA
+Fiji,FJI,2009,,,,CPIA
+Georgia,GEO,2009,3,4,3,CPIA
+India,IND,2009,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2009,3,3,3,CPIA
+Kyrgyz Republic,KGZ,2009,2.5,3,3,CPIA
+Lao PDR,LAO,2009,2,3,4,CPIA
+Maldives,MDV,2009,3,3.5,4,CPIA
+Marshall Islands,MHL,2009,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2009,,,,CPIA
+Mongolia,MNG,2009,3,3.5,3,CPIA
+Myanmar,MMR,2009,,,,CPIA
+Nepal,NPL,2009,3,3,3.5,CPIA
+Pakistan,PAK,2009,2.5,3.5,3,CPIA
+Papua New Guinea,PNG,2009,3,2.5,2,CPIA
+Samoa,WSM,2009,4,4,4,CPIA
+Solomon Islands,SLB,2009,3,2,2,CPIA
+Sri Lanka,LKA,2009,3,3,3.5,CPIA
+Tajikistan,TJK,2009,2,3,3,CPIA
+Timor-Leste,TLS,2009,3,2.5,2.5,CPIA
+Tuvalu,TUV,2009,,,,CPIA
+Uzbekistan,UZB,2009,1.5,3,3.5,CPIA
+Vietnam,VNM,2009,3,3.5,3.5,CPIA
+Vanuatu,VUT,2009,3,3,3,CPIA
+Afghanistan,AFG,2010,2,2,2.5,CPIA
+Armenia,ARM,2010,3,4,3,CPIA
+Bangladesh,BGD,2010,3,3,3,CPIA
+Bhutan,BTN,2010,4.5,4,4.5,CPIA
+Cambodia,KHM,2010,2,2.5,3,CPIA
+Fiji,FJI,2010,,,,CPIA
+Georgia,GEO,2010,3.5,4,3,CPIA
+India,IND,2010,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2010,3,3,3,CPIA
+Kyrgyz Republic,KGZ,2010,2.5,3,3,CPIA
+Lao PDR,LAO,2010,2.5,3,4,CPIA
+Maldives,MDV,2010,3,3.5,4,CPIA
+Marshall Islands,MHL,2010,,,,CPIA
+"Micronesia, Fed. Sts.",FSM,2010,,,,CPIA
+Mongolia,MNG,2010,3,3.5,3,CPIA
+Myanmar,MMR,2010,,,,CPIA
+Nepal,NPL,2010,2.5,3,3.5,CPIA
+Pakistan,PAK,2010,2.5,3.5,2.5,CPIA
+Papua New Guinea,PNG,2010,3,3,2,CPIA
+Samoa,WSM,2010,4,4,4,CPIA
+Solomon Islands,SLB,2010,3,2,2,CPIA
+Sri Lanka,LKA,2010,3,3,3,CPIA
+Tajikistan,TJK,2010,2,3,3,CPIA
+Timor-Leste,TLS,2010,3,2.5,2.5,CPIA
+Tuvalu,TUV,2010,,,,CPIA
+Uzbekistan,UZB,2010,1.5,3,3.5,CPIA
+Vietnam,VNM,2010,3,3.5,3.5,CPIA
+Vanuatu,VUT,2010,3,3,3,CPIA
+Afghanistan,AFG,2011,2,2.5,2.5,CPIA
+Armenia,ARM,2011,3,3.5,3,CPIA
+Bangladesh,BGD,2011,2.5,3,2.5,CPIA
+Bhutan,BTN,2011,4.5,4,4,CPIA
+Cambodia,KHM,2011,2,2.5,3,CPIA
+Fiji,FJI,2011,,,,CPIA
+Georgia,GEO,2011,3.5,3.5,3,CPIA
+India,IND,2011,3.5,3.5,3.5,CPIA
+Kiribati,KIR,2011,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2011,2.5,3,2.5,CPIA
+Lao PDR,LAO,2011,2.5,3,4,CPIA
+Maldives,MDV,2011,3,3.5,4,CPIA
+Marshall Islands,MHL,2011,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2011,3,2.5,3,CPIA
+Mongolia,MNG,2011,3.5,3.5,3,CPIA
+Myanmar,MMR,2011,,,,CPIA
+Nepal,NPL,2011,3,3,3.5,CPIA
+Pakistan,PAK,2011,2.5,3.5,2.5,CPIA
+Papua New Guinea,PNG,2011,3,3,2,CPIA
+Samoa,WSM,2011,4,4,4,CPIA
+Solomon Islands,SLB,2011,3,2,2,CPIA
+Sri Lanka,LKA,2011,3,3,2.5,CPIA
+Tajikistan,TJK,2011,2.5,3,3,CPIA
+Timor-Leste,TLS,2011,2.5,2,2,CPIA
+Tuvalu,TUV,2011,,,,CPIA
+Uzbekistan,UZB,2011,2,3,3.5,CPIA
+Vietnam,VNM,2011,3,3.5,3.5,CPIA
+Vanuatu,VUT,2011,3,3,3,CPIA
+Afghanistan,AFG,2012,2,2.5,2.5,CPIA
+Armenia,ARM,2012,3.5,3.5,3,CPIA
+Bangladesh,BGD,2012,2.5,3,2.5,CPIA
+Bhutan,BTN,2012,4.5,4,4,CPIA
+Cambodia,KHM,2012,2,2.5,3,CPIA
+Fiji,FJI,2012,,,,CPIA
+Georgia,GEO,2012,3.5,4,3,CPIA
+India,IND,2012,3.5,3.5,4,CPIA
+Kiribati,KIR,2012,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2012,3,3,2.5,CPIA
+Lao PDR,LAO,2012,2.5,3,4,CPIA
+Maldives,MDV,2012,3,3.5,4,CPIA
+Marshall Islands,MHL,2012,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2012,3.5,2.5,3,CPIA
+Mongolia,MNG,2012,3.5,3.5,3.5,CPIA
+Myanmar,MMR,2012,,,,CPIA
+Nepal,NPL,2012,3,3,3.5,CPIA
+Pakistan,PAK,2012,2.5,3.5,2.5,CPIA
+Papua New Guinea,PNG,2012,3,3,2,CPIA
+Samoa,WSM,2012,4,4,4,CPIA
+Solomon Islands,SLB,2012,3,2,2.5,CPIA
+Sri Lanka,LKA,2012,3,3,2.5,CPIA
+Tajikistan,TJK,2012,2.5,3,3,CPIA
+Timor-Leste,TLS,2012,2.5,2,2,CPIA
+Tuvalu,TUV,2012,3,2.5,3,CPIA
+Uzbekistan,UZB,2012,2,3,3.5,CPIA
+Vietnam,VNM,2012,3,3.5,3.5,CPIA
+Vanuatu,VUT,2012,3.5,3,3,CPIA
+Afghanistan,AFG,2013,2,2.5,2.5,CPIA
+Armenia,ARM,2013,3.5,3.5,3,CPIA
+Bangladesh,BGD,2013,2.5,3,3,CPIA
+Bhutan,BTN,2013,4.5,4,4,CPIA
+Cambodia,KHM,2013,2,2.5,3,CPIA
+Fiji,FJI,2013,,,,CPIA
+Georgia,GEO,2013,3.5,4,3,CPIA
+India,IND,2013,3.5,3.5,4,CPIA
+Kiribati,KIR,2013,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2013,3,3,2.5,CPIA
+Lao PDR,LAO,2013,2.5,3,3.5,CPIA
+Maldives,MDV,2013,3,3,4,CPIA
+Marshall Islands,MHL,2013,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2013,3.5,2.5,3,CPIA
+Mongolia,MNG,2013,3.5,3.5,3.5,CPIA
+Myanmar,MMR,2013,2.5,2.5,2.5,CPIA
+Nepal,NPL,2013,3,3,3.5,CPIA
+Pakistan,PAK,2013,2.5,3.5,2.5,CPIA
+Papua New Guinea,PNG,2013,3,3,2,CPIA
+Samoa,WSM,2013,4,4,4,CPIA
+Solomon Islands,SLB,2013,3,2,2.5,CPIA
+Sri Lanka,LKA,2013,3,3,2.5,CPIA
+Tajikistan,TJK,2013,2.5,3,3,CPIA
+Timor-Leste,TLS,2013,2.5,2,2,CPIA
+Tuvalu,TUV,2013,3,2.5,3,CPIA
+Uzbekistan,UZB,2013,2,3,3.5,CPIA
+Vietnam,VNM,2013,3,3.5,3.5,CPIA
+Vanuatu,VUT,2013,3.5,3,3,CPIA
+Afghanistan,AFG,2014,2,2.5,2.5,CPIA
+Armenia,ARM,2014,,,,CPIA
+Bangladesh,BGD,2014,2.5,3,3,CPIA
+Bhutan,BTN,2014,4.5,4,4,CPIA
+Cambodia,KHM,2014,2,2.5,3,CPIA
+Fiji,FJI,2014,,,,CPIA
+Georgia,GEO,2014,,,,CPIA
+India,IND,2014,,,,CPIA
+Kiribati,KIR,2014,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2014,3,3,2.5,CPIA
+Lao PDR,LAO,2014,2.5,3,3.5,CPIA
+Maldives,MDV,2014,3,3,4,CPIA
+Marshall Islands,MHL,2014,3.5,3,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2014,3.5,3,3,CPIA
+Mongolia,MNG,2014,3.5,3,3.5,CPIA
+Myanmar,MMR,2014,3,3,2.5,CPIA
+Nepal,NPL,2014,3,3,3.5,CPIA
+Pakistan,PAK,2014,2.5,3.5,3,CPIA
+Papua New Guinea,PNG,2014,3,3,2,CPIA
+Samoa,WSM,2014,4,3,3.5,CPIA
+Solomon Islands,SLB,2014,3,3,2.5,CPIA
+Sri Lanka,LKA,2014,3,3,2.5,CPIA
+Tajikistan,TJK,2014,2.5,3,3,CPIA
+Timor-Leste,TLS,2014,2.5,3,2,CPIA
+Tuvalu,TUV,2014,3.5,3,3,CPIA
+Uzbekistan,UZB,2014,2,3,3.5,CPIA
+Vietnam,VNM,2014,3,3,4,CPIA
+Vanuatu,VUT,2014,3,3,3.5,CPIA
+Afghanistan,AFG,2015,2,2.5,2.5,CPIA
+Armenia,ARM,2015,,,,CPIA
+Bangladesh,BGD,2015,2.5,3,3,CPIA
+Bhutan,BTN,2015,4.5,4,4,CPIA
+Cambodia,KHM,2015,2,2.5,3,CPIA
+Fiji,FJI,2015,,,,CPIA
+Georgia,GEO,2015,,,,CPIA
+India,IND,2015,,,,CPIA
+Kiribati,KIR,2015,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2015,3,3,2.5,CPIA
+Lao PDR,LAO,2015,2.5,3,3.5,CPIA
+Maldives,MDV,2015,3,3,3.5,CPIA
+Marshall Islands,MHL,2015,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2015,3.5,2.5,3,CPIA
+Mongolia,MNG,2015,3.5,3.5,3.5,CPIA
+Myanmar,MMR,2015,3,2.5,2.5,CPIA
+Nepal,NPL,2015,3,3,3.5,CPIA
+Pakistan,PAK,2015,3,3.5,3,CPIA
+Papua New Guinea,PNG,2015,3,3,2,CPIA
+Samoa,WSM,2015,4,4,3.5,CPIA
+Solomon Islands,SLB,2015,3,2,2.5,CPIA
+Sri Lanka,LKA,2015,3,3,2.5,CPIA
+Tajikistan,TJK,2015,2.5,3,3,CPIA
+Timor-Leste,TLS,2015,2.5,2,2,CPIA
+Tuvalu,TUV,2015,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2015,2,3,3.5,CPIA
+Vietnam,VNM,2015,3,3.5,4,CPIA
+Vanuatu,VUT,2015,3,3,3.5,CPIA
+Afghanistan,AFG,2016,2,2.5,2.5,CPIA
+Armenia,ARM,2016,,,,CPIA
+Bangladesh,BGD,2016,2.5,3,3,CPIA
+Bhutan,BTN,2016,4.5,4,4,CPIA
+Cambodia,KHM,2016,2,2.5,3,CPIA
+Fiji,FJI,2016,,,,CPIA
+Georgia,GEO,2016,,,,CPIA
+India,IND,2016,,,,CPIA
+Kiribati,KIR,2016,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2016,3,3,2.5,CPIA
+Lao PDR,LAO,2016,2.5,3,3.5,CPIA
+Maldives,MDV,2016,3,3,3.5,CPIA
+Marshall Islands,MHL,2016,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2016,3.5,2.5,2.5,CPIA
+Mongolia,MNG,2016,3.5,3,3.5,CPIA
+Myanmar,MMR,2016,3,2.5,2.5,CPIA
+Nepal,NPL,2016,3,3,3.5,CPIA
+Pakistan,PAK,2016,3,3,3,CPIA
+Papua New Guinea,PNG,2016,3,3,2,CPIA
+Samoa,WSM,2016,4,4,3.5,CPIA
+Solomon Islands,SLB,2016,3,2,2.5,CPIA
+Sri Lanka,LKA,2016,,,,CPIA
+Tajikistan,TJK,2016,2.5,3,3,CPIA
+Timor-Leste,TLS,2016,2.5,2,2,CPIA
+Tuvalu,TUV,2016,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2016,2,3,3.5,CPIA
+Vietnam,VNM,2016,,,,CPIA
+Vanuatu,VUT,2016,3,3,3.5,CPIA
+Afghanistan,AFG,2017,2,2.5,2.5,CPIA
+Armenia,ARM,2017,,,,CPIA
+Bangladesh,BGD,2017,2.5,2.5,3,CPIA
+Bhutan,BTN,2017,4.5,4,4,CPIA
+Cambodia,KHM,2017,2,2.5,3,CPIA
+Fiji,FJI,2017,,,,CPIA
+Georgia,GEO,2017,,,,CPIA
+India,IND,2017,,,,CPIA
+Kiribati,KIR,2017,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2017,3,3,2.5,CPIA
+Lao PDR,LAO,2017,2.5,3,3.5,CPIA
+Maldives,MDV,2017,2.5,3,3,CPIA
+Marshall Islands,MHL,2017,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2017,3.5,2.5,2.5,CPIA
+Mongolia,MNG,2017,3.5,3,3.5,CPIA
+Myanmar,MMR,2017,2.5,2.5,2.5,CPIA
+Nepal,NPL,2017,3,3,3.5,CPIA
+Pakistan,PAK,2017,3,3,3,CPIA
+Papua New Guinea,PNG,2017,3,3,2,CPIA
+Samoa,WSM,2017,4,4,3.5,CPIA
+Solomon Islands,SLB,2017,3,2,2.5,CPIA
+Sri Lanka,LKA,2017,,,,CPIA
+Tajikistan,TJK,2017,2.5,3,3,CPIA
+Timor-Leste,TLS,2017,2.5,2,2,CPIA
+Tuvalu,TUV,2017,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2017,2,3,3.5,CPIA
+Vietnam,VNM,2017,,,,CPIA
+Vanuatu,VUT,2017,3,3,3.5,CPIA
+Afghanistan,AFG,2018,2,2.5,2.5,CPIA
+Armenia,ARM,2018,,,,CPIA
+Bangladesh,BGD,2018,2.5,2.5,3,CPIA
+Bhutan,BTN,2018,4.5,4,4,CPIA
+Cambodia,KHM,2018,1.5,2.5,3,CPIA
+Fiji,FJI,2018,,,,CPIA
+Georgia,GEO,2018,,,,CPIA
+India,IND,2018,,,,CPIA
+Kiribati,KIR,2018,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2018,3,3,3,CPIA
+Lao PDR,LAO,2018,2.5,3,3.5,CPIA
+Maldives,MDV,2018,2.5,3,3,CPIA
+Marshall Islands,MHL,2018,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2018,3.5,2.5,2.5,CPIA
+Mongolia,MNG,2018,3,3,3.5,CPIA
+Myanmar,MMR,2018,2.5,2.5,2.5,CPIA
+Nepal,NPL,2018,3,3,3.5,CPIA
+Pakistan,PAK,2018,3,3,3,CPIA
+Papua New Guinea,PNG,2018,3,3,2,CPIA
+Samoa,WSM,2018,4,4,3.5,CPIA
+Solomon Islands,SLB,2018,3,2,2.5,CPIA
+Sri Lanka,LKA,2018,,,,CPIA
+Tajikistan,TJK,2018,2,3,3,CPIA
+Timor-Leste,TLS,2018,2.5,2,2,CPIA
+Tuvalu,TUV,2018,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2018,2.5,3,3.5,CPIA
+Vietnam,VNM,2018,,,,CPIA
+Vanuatu,VUT,2018,3,3,3.5,CPIA
+Afghanistan,AFG,2019,2,2.5,2.5,CPIA
+Armenia,ARM,2019,,,,CPIA
+Bangladesh,BGD,2019,2.5,2.5,3,CPIA
+Bhutan,BTN,2019,4.5,4,4,CPIA
+Cambodia,KHM,2019,1.5,2.5,3,CPIA
+Fiji,FJI,2019,,,,CPIA
+Georgia,GEO,2019,,,,CPIA
+India,IND,2019,,,,CPIA
+Kiribati,KIR,2019,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2019,3,3,3,CPIA
+Lao PDR,LAO,2019,2.5,2.5,3.5,CPIA
+Maldives,MDV,2019,3,3,4,CPIA
+Marshall Islands,MHL,2019,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2019,3.5,2.5,2.5,CPIA
+Mongolia,MNG,2019,3,3.5,3.5,CPIA
+Myanmar,MMR,2019,2.5,2.5,2.5,CPIA
+Nepal,NPL,2019,3,2.5,3.5,CPIA
+Pakistan,PAK,2019,3,3,3,CPIA
+Papua New Guinea,PNG,2019,2.5,2.5,2,CPIA
+Samoa,WSM,2019,4,4,3.5,CPIA
+Solomon Islands,SLB,2019,3,2,2.5,CPIA
+Sri Lanka,LKA,2019,3,3.5,3.5,CPIA
+Tajikistan,TJK,2019,2,3,3,CPIA
+Timor-Leste,TLS,2019,3,2,2,CPIA
+Tuvalu,TUV,2019,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2019,2.5,3,3.5,CPIA
+Vietnam,VNM,2019,,,,CPIA
+Vanuatu,VUT,2019,3,3,3.5,CPIA
+Afghanistan,AFG,2020,2,2.5,2.5,CPIA
+Armenia,ARM,2020,,,,CPIA
+Bangladesh,BGD,2020,2.5,2,3,CPIA
+Bhutan,BTN,2020,4.5,4,4,CPIA
+Cambodia,KHM,2020,1.5,2.5,3,CPIA
+Fiji,FJI,2020,3.5,3.5,4,CPIA
+Georgia,GEO,2020,,,,CPIA
+India,IND,2020,,,,CPIA
+Kiribati,KIR,2020,3.5,3,3,CPIA
+Kyrgyz Republic,KGZ,2020,3,3,3,CPIA
+Lao PDR,LAO,2020,2.5,2.5,3.5,CPIA
+Maldives,MDV,2020,3,3,4,CPIA
+Marshall Islands,MHL,2020,3.5,2,3,CPIA
+"Micronesia, Fed. Sts.",FSM,2020,3.5,2.5,3,CPIA
+Mongolia,MNG,2020,,,,CPIA
+Myanmar,MMR,2020,2.5,2.5,2.5,CPIA
+Nepal,NPL,2020,3,2.5,3.5,CPIA
+Pakistan,PAK,2020,3,3,3,CPIA
+Papua New Guinea,PNG,2020,2.5,2.5,2,CPIA
+Samoa,WSM,2020,4,4,3.5,CPIA
+Solomon Islands,SLB,2020,3,2,2.5,CPIA
+Sri Lanka,LKA,2020,,,,CPIA
+Tajikistan,TJK,2020,2,3,3,CPIA
+Timor-Leste,TLS,2020,3,2,2,CPIA
+Tuvalu,TUV,2020,3.5,2.5,3,CPIA
+Uzbekistan,UZB,2020,2.5,3,3.5,CPIA
+Vietnam,VNM,2020,,,,CPIA
+Vanuatu,VUT,2020,3,3,3.5,CPIA
