@@ -48,7 +48,7 @@ df <- df %>%
          migrant_stock=migrant_stock/10000,
          refugee_stock=refugee_stock/10000,
          gdp=gdp/1000,
-         state_legit=100-state_legit)
+         state_legit=10-state_legit)
 
 col_names <- c('migrant_stock'='Migrant Stock (10,000s)', 
                'refugee_stock'='Refugee Stock (10,000s)',
