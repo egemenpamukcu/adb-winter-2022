@@ -1,50 +1,50 @@
-iso,country_name,membership_type
-AFG,Afghanistan,Regional
-ARM,Armenia,Regional
-AUS,Australia,Regional
-AZE,Azerbaijan,Regional
-BGD,Bangladesh,Regional
-BTN,Bhutan,Regional
-BRN,Brunei Darussalam,Regional
-KHM,Cambodia,Regional
-CHN,China,Regional
-COK,Cook Islands,Regional
-FJI,Fiji,Regional
-GEO,Georgia,Regional
-HKG,Hong Kong,Regional
-IND,India,Regional
-IDN,Indonesia,Regional
-JPN,Japan,Regional
-KAZ,Kazakhstan,Regional
-KIR,Kiribati,Regional
-KGZ,Kyrgyzstan,Regional
-LAO,Lao People's Democratic Republic,Regional
-MYS,Malaysia,Regional
-MDV,Maldives,Regional
-MHL,Marshall Islands,Regional
-FSM,"Micronesia, Federated States of",Regional
-MNG,Mongolia,Regional
-MMR,Myanmar,Regional
-NRU,Nauru,Regional
-NPL,Nepal,Regional
-NZL,New Zealand,Regional
-NIU,Niue,Regional
-PAK,Pakistan,Regional
-PLW,Palau,Regional
-PNG,Papua New Guinea,Regional
-PHL,Philippines,Regional
-WSM,Samoa,Regional
-SGP,Singapore,Regional
-SLB,Solomon Islands,Regional
-KOR,"Korea, Republic of",Regional
-LKA,Sri Lanka,Regional
-TWN,"Taiwan, Province of China",Regional
-TJK,Tajikistan,Regional
-THA,Thailand,Regional
-TLS,Timor-Leste,Regional
-TON,Tonga,Regional
-TKM,Turkmenistan,Regional
-TUV,Tuvalu,Regional
-UZB,Uzbekistan,Regional
-VUT,Vanuatu,Regional
-VNM,Viet Nam,Regional
+country_name,iso,region,donor,sids,ldc
+Afghanistan,AFG,South Asia,0,0,1
+Armenia,ARM,Central and West Asia,0,0,0
+Australia,AUS,Oceania,1,0,0
+Azerbaijan,AZE,Central and West Asia,0,0,0
+Bangladesh,BGD,South Asia,0,0,1
+Brunei Darussalam,BRN,Southeast Asia,1,0,0
+Bhutan,BTN,South Asia,0,0,1
+People's Republic of China,CHN,East Asia,1,0,0
+Cook Islands,COK,Oceania,0,1,0
+Fiji,FJI,Oceania,0,1,0
+Federated States of Micronesia,FSM,Oceania,0,1,0
+Georgia,GEO,Central and West Asia,0,0,0
+"Hong Kong, China",HKG,East Asia,1,0,0
+Indonesia,IDN,Southeast Asia,1,0,0
+India,IND,South Asia,1,0,0
+Japan,JPN,East Asia,1,0,0
+Kazakhstan,KAZ,Central and West Asia,1,0,0
+Kyrgyz Republic,KGZ,Central and West Asia,0,0,0
+Cambodia,KHM,Southeast Asia,0,0,1
+Kiribati,KIR,Oceania,0,1,1
+Republic of Korea,KOR,East Asia,1,0,0
+Lao People's Democratic Republic,LAO,Southeast Asia,0,0,1
+Sri Lanka,LKA,South Asia,0,0,0
+Maldives,MDV,South Asia,0,1,0
+Marshall Islands,MHL,Oceania,0,1,0
+Myanmar,MMR,Southeast Asia,0,0,0
+Mongolia,MNG,East Asia,0,0,0
+Malaysia,MYS,Southeast Asia,1,0,0
+Niue,NIU,Oceania,0,1,0
+Nepal,NPL,South Asia,0,0,1
+Nauru,NRU,Oceania,1,1,0
+New Zealand,NZL,Oceania,1,0,0
+Pakistan,PAK,South Asia,0,0,0
+Philippines,PHL,Southeast Asia,0,0,0
+Palau,PLW,Oceania,0,1,0
+Papua New Guinea,PNG,Oceania,0,1,0
+Singapore,SGP,Southeast Asia,1,1,0
+Solomon Islands,SLB,Oceania,0,1,1
+Thailand,THA,Southeast Asia,1,0,0
+Tajikistan,TJK,Central and West Asia,0,0,0
+Turkmenistan,TKM,Central and West Asia,0,0,0
+Timor-Leste,TLS,Southeast Asia,0,1,1
+Tonga,TON,Oceania,0,1,0
+Tuvalu,TUV,Oceania,0,1,1
+"Taipei,China",TWN,East Asia,1,0,0
+Uzbekistan,UZB,Central and West Asia,0,0,0
+Viet Nam,VNM,Southeast Asia,0,0,0
+Vanuatu,VUT,Oceania,0,1,0
+Samoa,WSM,Oceania,0,1,0

@@ -5,26 +5,214 @@ date: "3/4/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Loading Libraries
+```{r}
+library(tidyverse)
+# install.packages("vtable")
+library(vtable)
+# install.packages("Hmisc")
+library("Hmisc")
+# install.packages("corrplot")
+library(corrplot)
+library(naniar)
+library(corrplot)
+library(stargazer)
+library(htmltools)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Loading Data
+```{r}
+df <- read_csv("../../data/final/merged_data.csv")
+adb <- read_csv("../../data/final/adb-members.csv")
+output.fig.dir <- "../../output/figures"
+output.tab.dir <- "../../output/tables"
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+SAVE.RESULTS = FALSE
 
-```{r cars}
-summary(cars)
+df <- df %>% 
+  rename(migrant_stock=ims_both_sex, 
+         refugee_stock=estimated_refugee_stock_incl_asylum_seekers_both_sexes,
+         disaster_displacement=disaster_stock_displacementr_raw,
+         conflict_displacement=conflict_stock_displacement_raw, 
+         climate_change=CCH, 
+         air_quality=AIR, 
+         rule_of_law=`value.Rule of Law: Estimate`, 
+         gov_effectiveness=`value.Government Effectiveness: Estimate`, 
+         corruption_control=`value.Control of Corruption: Estimate`,
+         state_legit=`P1: State Legitimacy`, 
+         cpa_d_12=D12, 
+         cpa_d_avg=D_avg, 
+         gdp=`GDP per capita (constant 2015 US$)`, 
+         gini=`value.Gini index (World Bank estimate)`) %>% 
+  mutate(conflict_displacement=conflict_displacement/10000, 
+         disaster_displacement=disaster_displacement/10000,
+         migrant_stock=migrant_stock/10000,
+         refugee_stock=refugee_stock/10000,
+         gdp=gdp/1000,
+         state_legit=10-state_legit, 
+         hdi_value=as.numeric(hdi_value))
+
+col_names <- c('migrant_stock'='Migrant Stock (10,000s)', 
+               'refugee_stock'='Refugee Stock (10,000s)',
+               'disaster_displacement'='Internal Displacement Due to Disasters (10,000s)',
+               'conflict_displacement'='Internal Displacement Due to Conflict (10,000s)', 
+               'climate_change'='Climate Change', 
+               'air_quality'='Air Quality', 
+               'rule_of_law'='Rule of Law', 
+               'gov_effectiveness'='Government Effectiveness', 
+               'corruption_control'='Control of Corruption',
+               'state_legit'='State Legitimacy', 
+               'cpa_d_12'='CPA: D-12', 
+               'cpa_d_avg'='CPA: Cluster D Average', 
+               'gdp'='GDP Per Capita (1,000s)', 
+               'hdi_value'="HDI",
+               'gini'="Gini Index") 
+
+generic.cols <- c('iso', 'year', 'country_name', 'region', 'donor', 'sids', 'ldc')
+outcome.cols <- c('state_legit', 'cpa_d_avg', 'cpa_d_12')
+
+keep <- df %>% 
+  arrange(year, iso) %>% 
+  select(names(col_names)) %>% 
+  mutate(keep = if_any(everything(), ~ !is.na(.))) %>% 
+  pull(keep)
+
+df <- df %>% 
+  arrange(year, iso) %>% 
+  select(iso, year, names(col_names)) %>% 
+  arrange(year) %>% 
+  filter(keep) %>% 
+  left_join(adb, by='iso')
+  
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+## Dependent variables across time
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+### With both donors and recipients, across regions
+```{r}
+for (reg in unique(df$region)) {
+  for (outcome in outcome.cols) {
+    plt <- df %>% 
+      filter(region==reg) %>% 
+      select('iso', 'year', outcome) %>% 
+      drop_na() %>% 
+      ggplot(aes_string(x='year', outcome)) +
+      geom_line(aes(color=iso)) + 
+      geom_point(aes(color=iso)) +
+      labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+      theme_classic()
+    print(plt)
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '.png', sep=''))
+    }
+  }
+}
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### With only recipients, across regions
+```{r}
+for (reg in unique(df$region)) {
+  for (outcome in outcome.cols) {
+    plt <- df %>% 
+      filter(region==reg & donor==0) %>% 
+      select('iso', 'year', outcome) %>% 
+      drop_na() %>% 
+      ggplot(aes_string(x='year', outcome)) +
+      geom_line(aes(color=iso)) + 
+      geom_point(aes(color=iso)) +
+      labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+      theme_classic()
+    print(plt)
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '.png', sep=''))
+    }
+  }
+}
+```
+
+## Across donor and recipient countries
+```{r}
+for (status in c('Donors', 'Recipients')) {
+  for (outcome in outcome.cols) {
+    plt <- df %>% 
+      mutate(donor=ifelse(donor, 'Donors', 'Recipients')) %>% 
+      filter(donor==status) %>% 
+      select('iso', 'year', outcome) %>% 
+      drop_na() %>% 
+      ggplot(aes_string(x='year', outcome)) +
+      geom_line(aes(color=iso)) + 
+      geom_point(aes(color=iso)) +
+      labs(title=status, subtitle=paste(col_names[outcome], 'across years')) +
+      theme_classic()
+    print(plt)
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(status), '.png', sep=''))
+    }
+  }
+}
+```
+
+
+## Paired Scatterplots
+```{r, echo=FALSE}
+
+# donor vs recipient
+for (col in names(df %>% select(-generic.cols, -state_legit))) {
+  sdf <- df %>% 
+    filter(donor==0) %>%    
+    select('iso', 'year', 'state_legit', col) %>% 
+    drop_na()
+  
+  countries <- sdf %>% 
+    filter(year %in% c(max(sdf$year), min(sdf$year))) %>% 
+    group_by(iso) %>% 
+    summarise(count=n()) %>% 
+    filter(count==2) %>% 
+    pull(iso)
+  
+  plot.df <- sdf %>% 
+    filter(year %in% c(max(sdf$year), min(sdf$year)) & iso %in% countries) %>% 
+    arrange(iso) %>% 
+    mutate(paired = rep(1:(n()/2),each=2),
+           year=factor(year), 
+           iso=ifelse(year==min(sdf$year), iso, ''))
+  
+  plt <- plot.df %>% 
+    ggplot(aes_string(x=col,'state_legit')) +
+    geom_point(aes(color=year)) +
+    geom_line(aes(group = paired), color='gray', alpha=.5) + 
+    ggrepel::geom_text_repel(label=plot.df$iso) +
+    theme_classic()
+  print(plt)
+}
+```
+
+
+
+## Fixed Effects Regression
+
+
+https://www.princeton.edu/~otorres/Panel101R.pdf
+panel_model <- plm(state_leg ~ climate, data = data_set, indec = c("iso", "year"), model = "within")
+Maya Van Nuys (she/her) to Everyone (1:31 PM)
+panel data code (updated): panel_model <- plm(state_leg ~ climate, data = data_set, index = c("iso", "year"), model = "within")
+library(AER)
+library(plm)
+
+panel_model <- plm(state_leg ~ climate, data = data_set, index = c("iso", "year"), model = "within", effect = "twoways")
+
+```{r}
+library(AER)
+library(plm)
+
+plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
+
+plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+
+
+```
+
+
+
