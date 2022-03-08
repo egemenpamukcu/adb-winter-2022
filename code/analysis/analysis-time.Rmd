@@ -94,6 +94,8 @@ df <- df %>%
 ```{r}
 for (reg in unique(df$region)) {
   for (outcome in outcome.cols) {
+    y.lim <- 5
+    if (outcome == 'state_legit') {y.lim <- 10}
     plt <- df %>% 
       filter(region==reg) %>% 
       select('iso', 'year', outcome) %>% 
@@ -102,6 +104,7 @@ for (reg in unique(df$region)) {
       geom_line(aes(color=iso)) + 
       geom_point(aes(color=iso)) +
       labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+      ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
@@ -115,6 +118,8 @@ for (reg in unique(df$region)) {
 ```{r}
 for (reg in unique(df$region)) {
   for (outcome in outcome.cols) {
+    y.lim <- 5
+    if (outcome == 'state_legit') {y.lim <- 10}
     plt <- df %>% 
       filter(region==reg & donor==0) %>% 
       select('iso', 'year', outcome) %>% 
@@ -123,6 +128,7 @@ for (reg in unique(df$region)) {
       geom_line(aes(color=iso)) + 
       geom_point(aes(color=iso)) +
       labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+      ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
@@ -136,6 +142,8 @@ for (reg in unique(df$region)) {
 ```{r}
 for (status in c('Donors', 'Recipients')) {
   for (outcome in outcome.cols) {
+    y.lim <- 5
+    if (outcome == 'state_legit') {y.lim <- 10}
     plt <- df %>% 
       mutate(donor=ifelse(donor, 'Donors', 'Recipients')) %>% 
       filter(donor==status) %>% 
@@ -145,6 +153,7 @@ for (status in c('Donors', 'Recipients')) {
       geom_line(aes(color=iso)) + 
       geom_point(aes(color=iso)) +
       labs(title=status, subtitle=paste(col_names[outcome], 'across years')) +
+      ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
@@ -221,10 +230,19 @@ library(plm)
 
 # plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
 
-model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-summary(model)
+migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
+governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+
+# full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+
+stargazer(climate.model, migration.model, governance.model, type='text')
+
+if (SAVE.RESULTS) {
+  stargazer(climate.model, migration.model, governance.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
+}
 ```
 
 
