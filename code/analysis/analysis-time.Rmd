@@ -1,7 +1,7 @@
 ---
 title: "Fragility Across Time"
 author: "Egemen Pamukcu"
-date: "3/4/2022"
+date: "3/7/2022"
 output: html_document
 ---
 
@@ -28,7 +28,7 @@ adb <- read_csv("../../data/final/adb-members.csv")
 output.fig.dir <- "../../output/figures"
 output.tab.dir <- "../../output/tables"
 
-SAVE.RESULTS = FALSE
+SAVE.RESULTS = TRUE
 
 df <- df %>% 
   rename(migrant_stock=ims_both_sex, 
@@ -126,7 +126,7 @@ for (reg in unique(df$region)) {
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
-      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '.png', sep=''))
+      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '_recipients', '.png', sep=''))
     }
   }
 }
@@ -159,36 +159,48 @@ for (status in c('Donors', 'Recipients')) {
 ```{r, echo=FALSE}
 
 # donor vs recipient
-for (col in names(df %>% select(-generic.cols, -state_legit))) {
-  sdf <- df %>% 
-    filter(donor==0) %>%    
-    select('iso', 'year', 'state_legit', col) %>% 
-    drop_na()
-  
-  countries <- sdf %>% 
-    filter(year %in% c(max(sdf$year), min(sdf$year))) %>% 
-    group_by(iso) %>% 
-    summarise(count=n()) %>% 
-    filter(count==2) %>% 
-    pull(iso)
-  
-  plot.df <- sdf %>% 
-    filter(year %in% c(max(sdf$year), min(sdf$year)) & iso %in% countries) %>% 
-    arrange(iso) %>% 
-    mutate(paired = rep(1:(n()/2),each=2),
-           year=factor(year), 
-           iso=ifelse(year==min(sdf$year), iso, ''))
-  
-  plt <- plot.df %>% 
-    ggplot(aes_string(x=col,'state_legit')) +
-    geom_point(aes(color=year)) +
-    geom_line(aes(group = paired), color='gray', alpha=.5) + 
-    ggrepel::geom_text_repel(label=plot.df$iso) +
-    theme_classic()
-  print(plt)
+for (status in c('Donors', 'Recipients')) {
+  for (col in names(df %>% select(-generic.cols, -state_legit))) {
+    sdf <- df %>% 
+      mutate(donor=ifelse(donor, 'Donors', 'Recipients')) %>% 
+      filter(donor==status) %>% 
+      select('iso', 'year', 'state_legit', col) %>% 
+      drop_na()
+    
+    countries <- sdf %>% 
+      filter(year %in% c(max(sdf$year), min(sdf$year))) %>% 
+      group_by(iso) %>% 
+      summarise(count=n()) %>% 
+      filter(count==2) %>% 
+      pull(iso)
+    
+    if (length(countries) < 5) {
+      next
+    }
+    
+    plot.df <- sdf %>% 
+      filter(year %in% c(max(sdf$year), min(sdf$year)) & iso %in% countries) %>% 
+      arrange(iso) %>% 
+      mutate(paired = rep(1:(n()/2),each=2),
+             year=factor(year),
+             iso=ifelse(year==min(sdf$year), iso, ''))
+    
+    plt <- plot.df %>% 
+      ggplot(aes_string(x=col,'state_legit')) +
+      geom_point(aes(color=year)) +
+      geom_line(aes(group = paired), color='gray', alpha=.5) + 
+      ggrepel::geom_text_repel(label=plot.df$iso) +
+      theme_classic() + 
+      labs(subtitle=paste(col_names[col], 'vs.', 'State Legitimacy'), title=status)
+    print(plt)
+    
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, '/paired_state_legit_X_', col, '_', tolower(status), '.png', sep=''))
+    }
+  }
 }
-```
 
+```
 
 
 ## Fixed Effects Regression
@@ -207,10 +219,11 @@ panel_model <- plm(state_leg ~ climate, data = data_set, index = c("iso", "year"
 library(AER)
 library(plm)
 
-plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
+# plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
 
-plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
+summary(model)
 
 ```
 
