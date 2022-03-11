@@ -71,12 +71,12 @@ df_clean<- df %>%
           filter(year>=2010)
 df_clean ['hdi_value'] <- as.numeric(unlist(df_clean['hdi_value']))
 
+df_imputed<- df_clean %>%
+              na_interpolation(df_clean[,3:ncol(df_clean)], option='spline', maxgap=Inf)
+
 df_imputed %>%
       na.omit()%>%
       summarize_all(mean)
-
-df_imputed<- df_clean %>%
-              na_interpolation(df_clean[,3:ncol(df_clean)], option='spline', maxgap=Inf)
 
 # plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
 # FSI as fragility Indicator.
