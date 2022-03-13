@@ -18,6 +18,9 @@ library(naniar)
 library(corrplot)
 library(stargazer)
 library(htmltools)
+library(AER)
+library(plm)
+library("imputeTS")
 ```
 
 
@@ -215,35 +218,56 @@ for (status in c('Donors', 'Recipients')) {
 ## Fixed Effects Regression
 
 
-https://www.princeton.edu/~otorres/Panel101R.pdf
-panel_model <- plm(state_leg ~ climate, data = data_set, indec = c("iso", "year"), model = "within")
-Maya Van Nuys (she/her) to Everyone (1:31 PM)
-panel data code (updated): panel_model <- plm(state_leg ~ climate, data = data_set, index = c("iso", "year"), model = "within")
-library(AER)
-library(plm)
-
-panel_model <- plm(state_leg ~ climate, data = data_set, index = c("iso", "year"), model = "within", effect = "twoways")
-
+### Without imputing missing data
 ```{r}
-library(AER)
-library(plm)
-
-# plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
-
 climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-# full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-stargazer(climate.model, migration.model, governance.model, type='text')
+stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 
 if (SAVE.RESULTS) {
-  stargazer(climate.model, migration.model, governance.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
+  stargazer(climate.model, migration.model, governance.model, full.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
 }
 ```
 
 
+### Imputing `climate_change` and `air_quality` variables
+```{r}
+df.imp <- df
 
+for (col in c('air_quality', 'climate_change')) {
+  for (country in unique(df.imp$iso)) {
+      if (sum(!is.na(df.imp[(df.imp$iso==country), col])) >= 3) {
+        df.imp[df.imp$iso==country & df.imp$year >= 2006, col] <- na_interpolation(df.imp[df.imp$iso==country & df.imp$year >= 2006, col])
+      } else {
+        print(paste(col, '-', country))
+      }
+  }
+}
+
+if (SAVE.RESULTS) {
+  write_csv(df.imp, "../../data/final/merged_data_imputed.csv") 
+}
+```
+
+
+```{r}
+climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+
+migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+
+governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+
+full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+
+stargazer(climate.model, migration.model, governance.model, full.model, type='text')
+
+if (SAVE.RESULTS) {
+  stargazer(climate.model, migration.model, governance.model, full.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe_imputed.html', sep=''))
+}
+```
