@@ -220,54 +220,21 @@ for (status in c('Donors', 'Recipients')) {
 
 ### Without imputing missing data
 ```{r}
-<<<<<<< HEAD
 climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-=======
-library(AER)
-library(plm)
 
-# plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within")
+migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-# FSI as fragility Indicator.
-fsi_climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
->>>>>>> f745eb98ca5b6ceadaad9b9767b6f3359a3cb13b
+governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-fsi_migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-fsi_governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-<<<<<<< HEAD
 full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 
 if (SAVE.RESULTS) {
   stargazer(climate.model, migration.model, governance.model, full.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
-=======
-# fsi_full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-stargazer(fsi_climate.model, fsi_migration.model, fsi_governance.model, type='text')
-
-if (SAVE.RESULTS) {
-  stargazer(fsi_climate.model, fsi_migration.model, fsi_governance.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
->>>>>>> f745eb98ca5b6ceadaad9b9767b6f3359a3cb13b
-}
-
-# CPA as fragility indicator with a focuse on Fragility of Public Sector Management and Institutions.
-cpa_climate.model <- plm(cpa_d_avg ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-cpa_migration.model <- plm(cpa_d_avg ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-cpa_governance.model <- plm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-# cpa_full.model <- plm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
-
-stargazer(cpa_climate.model, cpa_migration.model, cpa_governance.model, type='text')
-
-if (SAVE.RESULTS) {
-  stargazer(cpa_climate.model, cpa_migration.model, cpa_governance.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
 }
 ```
+
 
 ### Imputing `climate_change` and `air_quality` variables
 ```{r}
