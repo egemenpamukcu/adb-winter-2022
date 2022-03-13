@@ -31,63 +31,68 @@ adb <- read_csv("../../data/final/adb-members.csv")
 output.fig.dir <- "../../output/figures"
 output.tab.dir <- "../../output/tables"
 
-SAVE.RESULTS = TRUE
+SAVE.RESULTS <- TRUE
 
-df <- df %>% 
-  rename(migrant_stock=ims_both_sex, 
-         refugee_stock=estimated_refugee_stock_incl_asylum_seekers_both_sexes,
-         disaster_displacement=disaster_stock_displacementr_raw,
-         conflict_displacement=conflict_stock_displacement_raw, 
-         climate_change=CCH, 
-         air_quality=AIR, 
-         rule_of_law=`value.Rule of Law: Estimate`, 
-         gov_effectiveness=`value.Government Effectiveness: Estimate`, 
-         corruption_control=`value.Control of Corruption: Estimate`,
-         state_legit=`P1: State Legitimacy`, 
-         cpa_d_12=D12, 
-         cpa_d_avg=D_avg, 
-         gdp=`GDP per capita (constant 2015 US$)`, 
-         gini=`value.Gini index (World Bank estimate)`) %>% 
-  mutate(conflict_displacement=conflict_displacement/10000, 
-         disaster_displacement=disaster_displacement/10000,
-         migrant_stock=migrant_stock/10000,
-         refugee_stock=refugee_stock/10000,
-         gdp=gdp/1000,
-         state_legit=10-state_legit, 
-         hdi_value=as.numeric(hdi_value))
+df <- df %>%
+  rename(
+    migrant_stock = ims_both_sex,
+    refugee_stock = estimated_refugee_stock_incl_asylum_seekers_both_sexes,
+    disaster_displacement = disaster_stock_displacementr_raw,
+    conflict_displacement = conflict_stock_displacement_raw,
+    climate_change = CCH,
+    air_quality = AIR,
+    rule_of_law = `value.Rule of Law: Estimate`,
+    gov_effectiveness = `value.Government Effectiveness: Estimate`,
+    corruption_control = `value.Control of Corruption: Estimate`,
+    state_legit = `P1: State Legitimacy`,
+    cpa_d_12 = D12,
+    cpa_d_avg = D_avg,
+    gdp = `GDP per capita (constant 2015 US$)`,
+    gini = `value.Gini index (World Bank estimate)`
+  ) %>%
+  mutate(
+    conflict_displacement = conflict_displacement / 10000,
+    disaster_displacement = disaster_displacement / 10000,
+    migrant_stock = migrant_stock / 10000,
+    refugee_stock = refugee_stock / 10000,
+    gdp = gdp / 1000,
+    state_legit = 10 - state_legit,
+    hdi_value = as.numeric(hdi_value)
+  )
 
-col_names <- c('migrant_stock'='Migrant Stock (10,000s)', 
-               'refugee_stock'='Refugee Stock (10,000s)',
-               'disaster_displacement'='Internal Displacement Due to Disasters (10,000s)',
-               'conflict_displacement'='Internal Displacement Due to Conflict (10,000s)', 
-               'climate_change'='Climate Change', 
-               'air_quality'='Air Quality', 
-               'rule_of_law'='Rule of Law', 
-               'gov_effectiveness'='Government Effectiveness', 
-               'corruption_control'='Control of Corruption',
-               'state_legit'='State Legitimacy', 
-               'cpa_d_12'='CPA: D-12', 
-               'cpa_d_avg'='CPA: Cluster D Average', 
-               'gdp'='GDP Per Capita (1,000s)', 
-               'hdi_value'="HDI",
-               'gini'="Gini Index") 
+col_names <- c(
+  "migrant_stock" = "Migrant Stock (10,000s)",
+  "refugee_stock" = "Refugee Stock (10,000s)",
+  "disaster_displacement" = "Internal Displacement Due to Disasters (10,000s)",
+  "conflict_displacement" = "Internal Displacement Due to Conflict (10,000s)",
+  "climate_change" = "Climate Change",
+  "air_quality" = "Air Quality",
+  "rule_of_law" = "Rule of Law",
+  "gov_effectiveness" = "Government Effectiveness",
+  "corruption_control" = "Control of Corruption",
+  "state_legit" = "State Legitimacy",
+  "cpa_d_12" = "CPA: D-12",
+  "cpa_d_avg" = "CPA: Cluster D Average",
+  "gdp" = "GDP Per Capita (1,000s)",
+  "hdi_value" = "HDI",
+  "gini" = "Gini Index"
+)
 
-generic.cols <- c('iso', 'year', 'country_name', 'region', 'donor', 'sids', 'ldc')
-outcome.cols <- c('state_legit', 'cpa_d_avg', 'cpa_d_12')
+generic.cols <- c("iso", "year", "country_name", "region", "donor", "sids", "ldc")
+outcome.cols <- c("state_legit", "cpa_d_avg", "cpa_d_12")
 
-keep <- df %>% 
-  arrange(year, iso) %>% 
-  select(names(col_names)) %>% 
-  mutate(keep = if_any(everything(), ~ !is.na(.))) %>% 
+keep <- df %>%
+  arrange(year, iso) %>%
+  select(names(col_names)) %>%
+  mutate(keep = if_any(everything(), ~ !is.na(.))) %>%
   pull(keep)
 
-df <- df %>% 
-  arrange(year, iso) %>% 
-  select(iso, year, names(col_names)) %>% 
-  arrange(year) %>% 
-  filter(keep) %>% 
-  left_join(adb, by='iso')
-  
+df <- df %>%
+  arrange(year, iso) %>%
+  select(iso, year, names(col_names)) %>%
+  arrange(year) %>%
+  filter(keep) %>%
+  left_join(adb, by = "iso")
 ```
 
 
@@ -98,20 +103,22 @@ df <- df %>%
 for (reg in unique(df$region)) {
   for (outcome in outcome.cols) {
     y.lim <- 5
-    if (outcome == 'state_legit') {y.lim <- 10}
-    plt <- df %>% 
-      filter(region==reg) %>% 
-      select('iso', 'year', outcome) %>% 
-      drop_na() %>% 
-      ggplot(aes_string(x='year', outcome)) +
-      geom_line(aes(color=iso)) + 
-      geom_point(aes(color=iso)) +
-      labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+    if (outcome == "state_legit") {
+      y.lim <- 10
+    }
+    plt <- df %>%
+      filter(region == reg) %>%
+      select("iso", "year", outcome) %>%
+      drop_na() %>%
+      ggplot(aes_string(x = "year", outcome)) +
+      geom_line(aes(color = iso)) +
+      geom_point(aes(color = iso)) +
+      labs(title = reg, subtitle = paste(col_names[outcome], "across years")) +
       ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
-      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '.png', sep=''))
+      ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(str_replace(reg, " ", "-")), ".png", sep = ""))
     }
   }
 }
@@ -122,20 +129,22 @@ for (reg in unique(df$region)) {
 for (reg in unique(df$region)) {
   for (outcome in outcome.cols) {
     y.lim <- 5
-    if (outcome == 'state_legit') {y.lim <- 10}
-    plt <- df %>% 
-      filter(region==reg & donor==0) %>% 
-      select('iso', 'year', outcome) %>% 
-      drop_na() %>% 
-      ggplot(aes_string(x='year', outcome)) +
-      geom_line(aes(color=iso)) + 
-      geom_point(aes(color=iso)) +
-      labs(title=reg, subtitle=paste(col_names[outcome], 'across years')) +
+    if (outcome == "state_legit") {
+      y.lim <- 10
+    }
+    plt <- df %>%
+      filter(region == reg & donor == 0) %>%
+      select("iso", "year", outcome) %>%
+      drop_na() %>%
+      ggplot(aes_string(x = "year", outcome)) +
+      geom_line(aes(color = iso)) +
+      geom_point(aes(color = iso)) +
+      labs(title = reg, subtitle = paste(col_names[outcome], "across years")) +
       ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
-      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(str_replace(reg, " " ,"-")), '_recipients', '.png', sep=''))
+      ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(str_replace(reg, " ", "-")), "_recipients", ".png", sep = ""))
     }
   }
 }
@@ -143,24 +152,26 @@ for (reg in unique(df$region)) {
 
 ## Across donor and recipient countries
 ```{r}
-for (status in c('Donors', 'Recipients')) {
+for (status in c("Donors", "Recipients")) {
   for (outcome in outcome.cols) {
     y.lim <- 5
-    if (outcome == 'state_legit') {y.lim <- 10}
-    plt <- df %>% 
-      mutate(donor=ifelse(donor, 'Donors', 'Recipients')) %>% 
-      filter(donor==status) %>% 
-      select('iso', 'year', outcome) %>% 
-      drop_na() %>% 
-      ggplot(aes_string(x='year', outcome)) +
-      geom_line(aes(color=iso)) + 
-      geom_point(aes(color=iso)) +
-      labs(title=status, subtitle=paste(col_names[outcome], 'across years')) +
+    if (outcome == "state_legit") {
+      y.lim <- 10
+    }
+    plt <- df %>%
+      mutate(donor = ifelse(donor, "Donors", "Recipients")) %>%
+      filter(donor == status) %>%
+      select("iso", "year", outcome) %>%
+      drop_na() %>%
+      ggplot(aes_string(x = "year", outcome)) +
+      geom_line(aes(color = iso)) +
+      geom_point(aes(color = iso)) +
+      labs(title = status, subtitle = paste(col_names[outcome], "across years")) +
       ylim(0, y.lim) +
       theme_classic()
     print(plt)
     if (SAVE.RESULTS) {
-      ggsave(paste(output.fig.dir, '/year_X_', outcome, '_', tolower(status), '.png', sep=''))
+      ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(status), ".png", sep = ""))
     }
   }
 }
@@ -171,47 +182,48 @@ for (status in c('Donors', 'Recipients')) {
 ```{r, echo=FALSE}
 
 # donor vs recipient
-for (status in c('Donors', 'Recipients')) {
+for (status in c("Donors", "Recipients")) {
   for (col in names(df %>% select(-generic.cols, -state_legit))) {
-    sdf <- df %>% 
-      mutate(donor=ifelse(donor, 'Donors', 'Recipients')) %>% 
-      filter(donor==status) %>% 
-      select('iso', 'year', 'state_legit', col) %>% 
+    sdf <- df %>%
+      mutate(donor = ifelse(donor, "Donors", "Recipients")) %>%
+      filter(donor == status) %>%
+      select("iso", "year", "state_legit", col) %>%
       drop_na()
-    
-    countries <- sdf %>% 
-      filter(year %in% c(max(sdf$year), min(sdf$year))) %>% 
-      group_by(iso) %>% 
-      summarise(count=n()) %>% 
-      filter(count==2) %>% 
+
+    countries <- sdf %>%
+      filter(year %in% c(max(sdf$year), min(sdf$year))) %>%
+      group_by(iso) %>%
+      summarise(count = n()) %>%
+      filter(count == 2) %>%
       pull(iso)
-    
+
     if (length(countries) < 5) {
       next
     }
-    
-    plot.df <- sdf %>% 
-      filter(year %in% c(max(sdf$year), min(sdf$year)) & iso %in% countries) %>% 
-      arrange(iso) %>% 
-      mutate(paired = rep(1:(n()/2),each=2),
-             year=factor(year),
-             iso=ifelse(year==min(sdf$year), iso, ''))
-    
-    plt <- plot.df %>% 
-      ggplot(aes_string(x=col,'state_legit')) +
-      geom_point(aes(color=year)) +
-      geom_line(aes(group = paired), color='gray', alpha=.5) + 
-      ggrepel::geom_text_repel(label=plot.df$iso) +
-      theme_classic() + 
-      labs(subtitle=paste(col_names[col], 'vs.', 'State Legitimacy'), title=status)
+
+    plot.df <- sdf %>%
+      filter(year %in% c(max(sdf$year), min(sdf$year)) & iso %in% countries) %>%
+      arrange(iso) %>%
+      mutate(
+        paired = rep(1:(n() / 2), each = 2),
+        year = factor(year),
+        iso = ifelse(year == min(sdf$year), iso, "")
+      )
+
+    plt <- plot.df %>%
+      ggplot(aes_string(x = col, "state_legit")) +
+      geom_point(aes(color = year)) +
+      geom_line(aes(group = paired), color = "gray", alpha = .5) +
+      ggrepel::geom_text_repel(label = plot.df$iso) +
+      theme_classic() +
+      labs(subtitle = paste(col_names[col], "vs.", "State Legitimacy"), title = status)
     print(plt)
-    
+
     if (SAVE.RESULTS) {
-      ggsave(paste(output.fig.dir, '/paired_state_legit_X_', col, '_', tolower(status), '.png', sep=''))
+      ggsave(paste(output.fig.dir, "/paired_state_legit_X_", col, "_", tolower(status), ".png", sep = ""))
     }
   }
 }
-
 ```
 
 
@@ -228,10 +240,10 @@ governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corrupti
 
 full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-stargazer(climate.model, migration.model, governance.model, full.model, type='text')
+stargazer(climate.model, migration.model, governance.model, full.model, type = "text")
 
 if (SAVE.RESULTS) {
-  stargazer(climate.model, migration.model, governance.model, full.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe.html', sep=''))
+  stargazer(climate.model, migration.model, governance.model, full.model, type = "html", out = paste(output.tab.dir, "/state_legit_reg_fe.html", sep = ""))
 }
 ```
 
@@ -240,18 +252,18 @@ if (SAVE.RESULTS) {
 ```{r}
 df.imp <- df
 
-for (col in c('air_quality', 'climate_change')) {
+for (col in c("air_quality", "climate_change")) {
   for (country in unique(df.imp$iso)) {
-      if (sum(!is.na(df.imp[(df.imp$iso==country), col])) >= 3) {
-        df.imp[df.imp$iso==country & df.imp$year >= 2006, col] <- na_interpolation(df.imp[df.imp$iso==country & df.imp$year >= 2006, col])
-      } else {
-        print(paste(col, '-', country))
-      }
+    if (sum(!is.na(df.imp[(df.imp$iso == country), col])) >= 3) {
+      df.imp[df.imp$iso == country & df.imp$year >= 2006, col] <- na_interpolation(df.imp[df.imp$iso == country & df.imp$year >= 2006, col])
+    } else {
+      print(paste(col, "-", country))
+    }
   }
 }
 
 if (SAVE.RESULTS) {
-  write_csv(df.imp, "../../data/final/merged_data_imputed.csv") 
+  write_csv(df.imp, "../../data/final/merged_data_imputed.csv")
 }
 ```
 
@@ -265,9 +277,9 @@ governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corrupti
 
 full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
 
-stargazer(climate.model, migration.model, governance.model, full.model, type='text')
+stargazer(climate.model, migration.model, governance.model, full.model, type = "text")
 
 if (SAVE.RESULTS) {
-  stargazer(climate.model, migration.model, governance.model, full.model, type='html', out=paste(output.tab.dir, '/state_legit_reg_fe_imputed.html', sep=''))
+  stargazer(climate.model, migration.model, governance.model, full.model, type = "html", out = paste(output.tab.dir, "/state_legit_reg_fe_imputed.html", sep = ""))
 }
 ```
