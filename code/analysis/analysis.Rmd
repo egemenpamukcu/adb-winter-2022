@@ -212,10 +212,10 @@ lapply(names(df.noafg %>% select(-iso, -country_name, -state_legit)),
 
 
 ```{r}
-climate.model <- lm(state_legit ~ climate_change + air_quality + hdi_value + gdp, df)
+climate.model <- lm(state_legit ~ climate_change + air_quality + gdp, df)
 governance.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, df)
 migration.model <- lm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, df)
-full.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, df)
+full.model <- lm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + gdp, df)
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 
@@ -226,10 +226,10 @@ if (SAVE.RESULTS) {
 ```
 
 ```{r}
-climate.model <- lm(cpa_d_avg ~ climate_change + air_quality + hdi_value + gdp , df)
+climate.model <- lm(cpa_d_avg ~ climate_change + air_quality + gdp , df)
 governance.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + gdp , df)
 migration.model <- lm(cpa_d_avg ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp , df)
-full.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp , df)
+full.model <- lm(cpa_d_avg ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + gdp , df)
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 
@@ -241,10 +241,10 @@ if (SAVE.RESULTS) {
 ```
 
 ```{r}
-climate.model <- lm(cpa_d_12 ~ climate_change + air_quality + hdi_value + gdp, df)
+climate.model <- lm(cpa_d_12 ~ climate_change + air_quality + gdp, df)
 governance.model <- lm(cpa_d_12 ~ rule_of_law + gov_effectiveness + corruption_control + gdp, df)
 migration.model <- lm(cpa_d_12 ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, df)
-full.model <- lm(cpa_d_12 ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, df)
+full.model <- lm(cpa_d_12 ~ rule_of_law + gov_effectiveness + corruption_control + migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + climate_change + air_quality + gdp, df)
 
 stargazer(climate.model, migration.model, governance.model, full.model, type='text')
 
