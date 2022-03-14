@@ -144,7 +144,7 @@ if (SAVE.RESULTS) {
 }
 ```
 
-
+### All countries
 ```{r}
 lapply(names(df %>% select(-iso, -country_name, -state_legit)), 
           function(var_x){
@@ -163,7 +163,32 @@ lapply(names(df %>% select(-iso, -country_name, -state_legit)),
        )
 ```
 
+### Recipient Countries
+```{r}
+adb <- read_csv("../../data/final/adb-members.csv")
+df.recip <- adb %>% 
+  select(iso, donor) %>% 
+  right_join(df, by='iso') %>% 
+  filter(donor==0)
 
+lapply(names(df.recip %>% select(-iso, -country_name, -state_legit, -donor)), 
+          function(var_x){
+              plt <- ggplot(df.recip, aes_string(x=var_x, y='state_legit')) + 
+              geom_point(colour='orange') +
+              stat_smooth(method='lm', formula='y~x', fullrange=T, color='purple') + 
+              ggrepel::geom_text_repel(label=df.recip$iso) +
+              theme_classic() + 
+              labs(title=paste(col_names[var_x], 'vs.', 'State Legitimacy'), subtitle="Recipient Countries")
+              print(plt)
+            
+            if (SAVE.RESULTS) {
+              ggsave(paste(output.fig.dir, '/state_legit_X_', var_x, '_recipients', '.png', sep=''))
+            }
+          }
+       )
+```
+
+### All Countries Except Afghanistan
 ```{r}
 
 df.noafg <- df %>% filter(iso != 'AFG')
