@@ -232,13 +232,13 @@ for (status in c("Donors", "Recipients")) {
 
 ### Without imputing missing data
 ```{r}
-climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+climate.model <- plm(state_legit ~ air_quality + climate_change + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
-full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
+full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + gdp, data = df, index = c("iso", "year"), model = "within", effect = "twoways")
 
 stargazer(climate.model, migration.model, governance.model, full.model, type = "text")
 
@@ -269,13 +269,13 @@ if (SAVE.RESULTS) {
 
 
 ```{r}
-climate.model <- plm(state_legit ~ air_quality + climate_change + hdi_value + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+climate.model <- plm(state_legit ~ air_quality + climate_change + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
 
 migration.model <- plm(state_legit ~ migrant_stock + refugee_stock + conflict_displacement + disaster_displacement + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
 
 governance.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
 
-full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + hdi_value + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
+full.model <- plm(state_legit ~ rule_of_law + gov_effectiveness + corruption_control + conflict_displacement + disaster_displacement + climate_change + air_quality + gdp, data = df.imp, index = c("iso", "year"), model = "within", effect = "twoways")
 
 stargazer(climate.model, migration.model, governance.model, full.model, type = "text")
 
