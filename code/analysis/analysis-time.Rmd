@@ -80,6 +80,7 @@ col_names <- c(
 
 generic.cols <- c("iso", "year", "country_name", "region", "donor", "sids", "ldc")
 outcome.cols <- c("state_legit", "cpa_d_avg", "cpa_d_12")
+gov.cols <- c("rule_of_law", "gov_effectiveness", "corruption_control")
 
 keep <- df %>%
   arrange(year, iso) %>%
@@ -173,6 +174,79 @@ for (status in c("Donors", "Recipients")) {
     if (SAVE.RESULTS) {
       ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(status), ".png", sep = ""))
     }
+  }
+}
+```
+
+
+## Governance Variables Across Time
+### Recipients
+```{r}
+for (reg in unique(df$region)) {
+  for (outcome in gov.cols) {
+    plt <- df %>%
+      filter(region == reg & donor == 0) %>%
+      select("iso", "year", outcome) %>%
+      drop_na() %>%
+      ggplot(aes_string(x = "year", outcome)) +
+      geom_line(aes(color = iso)) +
+      geom_point(aes(color = iso)) +
+      labs(title = reg, subtitle = paste(col_names[outcome], "across years for recipient countries")) +
+      theme_classic()
+    print(plt)
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(str_replace(reg, " ", "-")), "_recipients", ".png", sep = ""))
+    }
+  }
+}
+```
+
+### Donors
+```{r}
+for (reg in unique(df$region)) {
+  for (outcome in gov.cols) {
+    plt <- df %>%
+      filter(region == reg & donor == 1) %>%
+      select("iso", "year", outcome) %>%
+      drop_na() %>%
+      ggplot(aes_string(x = "year", outcome)) +
+      geom_line(aes(color = iso)) +
+      geom_point(aes(color = iso)) +
+      labs(title = reg, subtitle = paste(col_names[outcome], "across years for donor countries")) +
+      theme_classic()
+    print(plt)
+    if (SAVE.RESULTS) {
+      ggsave(paste(output.fig.dir, "/year_X_", outcome, "_", tolower(str_replace(reg, " ", "-")), "_donors", ".png", sep = ""))
+    }
+  }
+}
+```
+
+### Gruped by recipient/donor status
+```{r}
+gb.df <- df %>% 
+  group_by(year, region, donor) %>% 
+  summarise(
+            rule_of_law = mean(rule_of_law),
+            gov_effectiveness = mean(gov_effectiveness),
+            corruption_control = mean(corruption_control)
+            ) %>% 
+  drop_na() %>% 
+  pivot_longer(cols=gov.cols)
+
+for (reg in unique(gb.df$region)) {
+  plt <- gb.df %>%
+    filter(region==reg) %>% 
+    mutate(status = ifelse(donor, "Donors", "Recipients")) %>%
+    ggplot(aes(x = year, value)) +
+    geom_line(aes(color = status)) +
+    geom_point(aes(color = status)) +
+    facet_grid("name") +
+    labs(title = reg, subtitle = "Governance indicators across years") +
+    theme_gray()
+  print(plt)
+  if (SAVE.RESULTS) {
+    ggsave(paste(output.fig.dir, "/year_X_governance_vars_", tolower(str_replace(reg, " ", "-")), ".png", sep = ""), height = 7, width = 7)
   }
 }
 ```
