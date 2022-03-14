@@ -26,7 +26,7 @@ df <- read_csv("../../data/final/small_data_imputed.csv")
 output.fig.dir <- "../../output/figures"
 output.tab.dir <- "../../output/tables"
 
-SAVE.RESULTS = TRUE
+SAVE.RESULTS = T
 
 df <- df %>% 
   rename(migrant_stock=ims_both_sex, 
@@ -65,6 +65,11 @@ col_names <- c('migrant_stock'='Migrant Stock (10,000s)',
                'gdp'='GDP Per Capita (1,000s)', 
                'hdi_value'="HDI",
                'gini'="Gini Index") 
+
+migr.cols <- c('migrant_stock', 'refugee_stock', 'disaster_displacement', 'conflict_displacement')
+climate.cols <- c('climate_change', 'air_quality')
+gov.cols <- c('rule_of_law', 'gov_effectiveness', 'corruption_control')
+outcome.cols <- c('cpa_d_12', 'cpa_d_avg', 'state_legit', 'gdp')
 
 names(df)
 ```
@@ -119,29 +124,39 @@ if (SAVE.RESULTS) {
 ```
 
 ```{r}
-dist_plots <- lapply(names(df %>% select(-iso, -country_name)), function(var_x){
-  p <- 
-    ggplot(df) +
-    aes_string(var_x) +
-    theme_light() +
+dist.df <- df %>% 
+  pivot_longer(cols = names(df %>% select(-iso, -country_name)), names_to = 'indicator') %>% 
+  mutate(pillar = ifelse(indicator %in% gov.cols, "Governance", ifelse(indicator %in% migr.cols, "Migration", ifelse(indicator %in% climate.cols, "Climate", ifelse(indicator %in% outcome.cols, "Outcome and Controls", NA))))) %>% 
+  drop_na()
+
+
+for (p in unique(dist.df$pillar)) {
+  h <- dist.df %>% 
+    filter(pillar==p) %>% 
+    pull(indicator) %>% 
+    unique() %>% 
+    length()
+  
+  plt <- dist.df %>% 
+    filter(pillar==p) %>% 
+    ggplot() + 
+      aes(value) +
+      geom_density() + 
+      facet_wrap("indicator", scales="free", ncol=1) + 
+    labs(title=p) + 
+    theme_light() + 
     theme(
       axis.text = element_blank(),
       axis.title.y = element_blank(),
-      axis.title.x = element_text(family='Helvetica', size=9),
+      axis.title.x = element_blank(),
       axis.ticks = element_blank()
       )
-    
-  if(is.numeric(df[[var_x]])) {
-    p <- p + geom_density()
+  print(plt)
+  if (SAVE.RESULTS) {
+    ggsave(filename = paste(output.fig.dir, '/distributions_', p, '.png', sep = ''), height = 1.5 * h, width = 2)
   }
-})
-
-
-cowplot::plot_grid(plotlist = dist_plots)
-
-if (SAVE.RESULTS) {
-  ggsave(filename = paste(output.fig.dir, '/distributions.png', sep = ''))
 }
+
 ```
 
 ### All countries
