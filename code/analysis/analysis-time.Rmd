@@ -251,6 +251,28 @@ for (reg in unique(gb.df$region)) {
 }
 ```
 
+### Aggregated Across Governance Indicators
+```{r}
+df %>% 
+  group_by(year) %>% 
+  select(year, gov.cols) %>% 
+  drop_na() %>% 
+  summarise(rule_of_law = mean(rule_of_law), 
+            gov_effectiveness = mean(gov_effectiveness), 
+            corruption_control = mean(corruption_control)) %>% 
+  pivot_longer(gov.cols, names_to = "Indicator") %>% 
+  ggplot(aes(x=year, y=value)) +
+  geom_line(aes(color=Indicator)) +
+  geom_point(aes(color=Indicator)) + 
+  labs(title = "Governance indicators across years") +
+  theme_classic()
+
+if (SAVE.RESULTS) {
+  ggsave("year_X_governance_vars_all_regions.png")
+}
+```
+
+
 
 ## Paired Scatterplots
 ```{r, echo=FALSE}
