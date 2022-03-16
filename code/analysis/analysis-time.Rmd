@@ -264,14 +264,14 @@ df %>%
   ggplot(aes(x=year, y=value)) +
   geom_line(aes(color=Indicator)) +
   geom_point(aes(color=Indicator)) + 
+  ylim(-2, 2) +
   labs(title = "Governance indicators across years") +
   theme_classic()
 
 if (SAVE.RESULTS) {
-  ggsave("year_X_governance_vars_all_regions.png")
+  ggsave(paste(output.fig.dir, "/year_X_governance_vars_all_regions.png", sep=""))
 }
 ```
-
 
 
 ## Paired Scatterplots
